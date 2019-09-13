@@ -1,12 +1,12 @@
 <template>
-  <div id="polyglot-zero-to-hero">
+  <div id="english-zero-to-hero">
     <template v-if="langLoaded">
       <div class="container-fluid bg-dark pt-4 pl-0 pr-0">
         <div class="container">
           <div class="row mb-4">
             <div class="col-sm-12 text-center pt-3">
               <router-link :to="`/${$lang.code}`">
-                <LanguageLogo :language="$lang" style="transform: scale(1.5)" />
+                <EnglishLogo :language="$lang" style="transform: scale(1.5)" />
               </router-link>
             </div>
           </div>
@@ -30,6 +30,7 @@
               <div class="zerotohero">
                 <LanguageLogo
                   v-for="language in languages.filter(language => language.url && language.published === true).sort((a,b) => b.name > a.name ? -1 : 0)"
+                  class="zerotohero-item"
                   :language="language"
                 />
               </div>
@@ -39,7 +40,7 @@
               </p>
               <p>
                 <b>Credits:</b>
-                {{ $lang.name }}-English dictionary data from
+                {{ $lang.name }}-L1 dictionary data from
                 <a
                   href="https://freedict.org/"
                 >freedict.org</a>.
@@ -56,6 +57,7 @@
 import Nav from '@/components/Nav'
 import SubNav from '@/components/SubNav'
 import LanguageLogo from '@/components/LanguageLogo'
+import EnglishLogo from '@/components/EnglishLogo'
 import Config from '@/lib/config'
 import Vue from 'vue'
 import FreeDict from '@/lib/freedict'
@@ -64,7 +66,8 @@ export default {
   components: {
     Nav,
     SubNav,
-    LanguageLogo
+    LanguageLogo,
+    EnglishLogo
   },
   data() {
     return {
@@ -76,6 +79,7 @@ export default {
   },
   async mounted() {
     this.languages = this.$langs
+    
   },
   watch: {
     async $route() {
@@ -92,6 +96,7 @@ export default {
           Vue.prototype.$dictionary = FreeDict.load(this.lang)
         }
         this.$lang.options = (await import(`@/lib/langs/${this.$lang.code}.js`)).default
+        this.$i18n.locale = this.$lang.code
         this.langLoaded = true
       }
     }

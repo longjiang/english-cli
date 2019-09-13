@@ -36,7 +36,7 @@
             {{ corpus.info }}
             <ul>
               <li v-if="corpus.is_featured">Featured.</li>
-              <li v-if="corpus.aligned">Parallel. That means English translation is available.</li>
+              <li v-if="corpus.aligned">Parallel. That means L1 translation is available.</li>
               <li v-if="corpus.diachronic">Diachronic. That means time information is available.</li>
               <li v-if="corpus.tags && corpus.tags.includes('spoken')">Spoken.</li>
               <li v-if="corpus.tags && corpus.tags.includes('web')">Web.</li>

@@ -45,7 +45,7 @@
               <br />
               <small>
                 <b>Note:</b> Many have closed captions, but they are in
-                <em>English.</em> You need to look for
+                <em>L1.</em> You need to look for
                 <em>{{ $lang.name }}</em> closed
                 captions. These are hard to find. If you cannot find any, look
                 in the suggested channels listed on this page.

@@ -24,11 +24,11 @@ export default new Router({
       props: true,
       component: () => import('./views/Dictionary.vue'),
       meta: {
-        title: 'Dictionary | Polyglot Zero to Hero',
+        title: 'Dictionary | English Zero to Hero',
         metaTags: [
           {
             name: 'description',
-            content: 'Look up and learn Polyglot words.'
+            content: 'Look up and learn English words.'
           }
         ]
       }
@@ -39,11 +39,11 @@ export default new Router({
       component: () => import('./views/Phrase.vue'),
       props: true,
       meta: {
-        title: 'Phrase | Polyglot Zero to Hero',
+        title: 'Phrase | English Zero to Hero',
         metaTags: [
           {
             name: 'description',
-            content: 'See how Polyglot phrases are used in real context..'
+            content: 'See how English phrases are used in real context..'
           }
         ]
       }
@@ -53,7 +53,7 @@ export default new Router({
       name: 'saved-words',
       component: () => import('./views/SavedWords.vue'),
       meta: {
-        title: 'Saved Words | Polyglot Zero to Hero',
+        title: 'Saved Words | English Zero to Hero',
         metaTags: [
           {
             name: 'description',
@@ -68,12 +68,12 @@ export default new Router({
       component: () => import('./views/Library.vue'),
       props: true,
       meta: {
-        title: 'Library | Polyglot Zero to Hero',
+        title: 'Library | English Zero to Hero',
         metaTags: [
           {
             name: 'description',
             content:
-              'Read free, open Polyglot books with hover dictionary and save new words for review.'
+              'Read free, open English books with hover dictionary and save new words for review.'
           }
         ]
       }
@@ -83,12 +83,12 @@ export default new Router({
       name: 'reader',
       component: () => import('./views/Reader.vue'),
       meta: {
-        title: 'Reader | Polyglot Zero to Hero',
+        title: 'Reader | English Zero to Hero',
         metaTags: [
           {
             name: 'description',
             content:
-              'Read Polyglot text with annotation and save new words for review.'
+              'Read English text with annotation and save new words for review.'
           }
         ]
       }
@@ -99,12 +99,12 @@ export default new Router({
       component: () => import('./views/BookChapter.vue'),
       props: true,
       meta: {
-        title: 'Book Chapter | Polyglot Zero to Hero',
+        title: 'Book Chapter | English Zero to Hero',
         metaTags: [
           {
             name: 'description',
             content:
-              'Read free, open Polyglot books with hover dictionary and save new words for review.'
+              'Read free, open English books with hover dictionary and save new words for review.'
           }
         ]
       }
@@ -115,12 +115,12 @@ export default new Router({
       component: () => import('./views/BookIndex.vue'),
       props: true,
       meta: {
-        title: 'Book | Polyglot Zero to Hero',
+        title: 'Book | English Zero to Hero',
         metaTags: [
           {
             name: 'description',
             content:
-              'Read free, open Polyglot books with hover dictionary and save new words for review.'
+              'Read free, open English books with hover dictionary and save new words for review.'
           }
         ]
       }
@@ -131,12 +131,12 @@ export default new Router({
       component: () => import('./views/BookList.vue'),
       props: true,
       meta: {
-        title: 'Books | Polyglot Zero to Hero',
+        title: 'Books | English Zero to Hero',
         metaTags: [
           {
             name: 'description',
             content:
-              'Read free, open Polyglot books with hover dictionary and save new words for review.'
+              'Read free, open English books with hover dictionary and save new words for review.'
           }
         ]
       }
@@ -147,11 +147,11 @@ export default new Router({
       component: () => import('./views/YouTubeSearch.vue'),
       props: true,
       meta: {
-        title: 'YouTube Reader | Polyglot Zero to Hero',
+        title: 'YouTube Reader | English Zero to Hero',
         metaTags: [
           {
             name: 'description',
-            content: 'Watch Polyglot YouTube videos and study the subtitles.'
+            content: 'Watch English YouTube videos and study the subtitles.'
           }
         ]
       }
@@ -162,11 +162,11 @@ export default new Router({
       component: () => import('./views/YouTubeView.vue'),
       props: true,
       meta: {
-        title: 'YouTube Reader | Polyglot Zero to Hero',
+        title: 'YouTube Reader | English Zero to Hero',
         metaTags: [
           {
             name: 'description',
-            content: 'Watch Polyglot YouTube videos and study the subtitles.'
+            content: 'Watch English YouTube videos and study the subtitles.'
           }
         ]
       }
@@ -177,11 +177,11 @@ export default new Router({
       component: () => import('./views/YouTubeBrowse.vue'),
       props: true,
       meta: {
-        title: 'Study YouTube Subtitles | Polyglot Zero to Hero',
+        title: 'Study YouTube Subtitles | English Zero to Hero',
         metaTags: [
           {
             name: 'description',
-            content: 'Watch Polyglot YouTube videos and study the subtitles.'
+            content: 'Watch English YouTube videos and study the subtitles.'
           }
         ]
       }
@@ -192,11 +192,11 @@ export default new Router({
       component: () => import('./views/YouTubeChannel.vue'),
       props: true,
       meta: {
-        title: 'Study YouTube Subtitles | Polyglot Zero to Hero',
+        title: 'Study YouTube Subtitles | English Zero to Hero',
         metaTags: [
           {
             name: 'description',
-            content: 'Watch Polyglot YouTube videos and study the subtitles.'
+            content: 'Watch English YouTube videos and study the subtitles.'
           }
         ]
       }
@@ -207,11 +207,11 @@ export default new Router({
       component: () => import('./views/YouTubePlaylist.vue'),
       props: true,
       meta: {
-        title: 'Study YouTube Subtitles | Polyglot Zero to Hero',
+        title: 'Study YouTube Subtitles | English Zero to Hero',
         metaTags: [
           {
             name: 'description',
-            content: 'Watch Polyglot YouTube videos and study the subtitles.'
+            content: 'Watch English YouTube videos and study the subtitles.'
           }
         ]
       }
@@ -221,7 +221,7 @@ export default new Router({
       name: 'settings',
       component: () => import('./views/Settings.vue'),
       meta: {
-        title: 'Settings | Polyglot Zero to Hero',
+        title: 'Settings | English Zero to Hero',
         metaTags: [
           {
             name: 'description',

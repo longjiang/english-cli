@@ -25,7 +25,7 @@
           <span v-if="word.pronunciation" class="wordlist-item-pinyin">
             /{{ word.pronunciation }}/
           </span>
-          <span v-if="word.definitions" class="wordlist-item-english">
+          <span v-if="word.definitions" class="wordlist-item-l1">
             {{ word.definitions.join(', ') }}
           </span>
         </a>
@@ -96,7 +96,7 @@ export default {
   font-size: 1.4em;
 }
 
-.wordlist-item-english {
+.wordlist-item-l1 {
   font-style: italic;
   color: #aaa;
 }

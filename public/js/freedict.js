@@ -142,10 +142,10 @@ const FreeDict = {
     let words = []
     for (let index in lines) {
       index = parseInt(index)
-      let polyglot = lines[index]
-      let matches = polyglot.match(/(.*) \/(.*)\//)
+      let english = lines[index]
+      let matches = english.match(/(.*) \/(.*)\//)
       if (matches) {
-        let matches2 = polyglot.match(/<(.*)>/)
+        let matches2 = english.match(/<(.*)>/)
         // Parse definitions (sometimes it's one line, other times it's multiple lines with numeric headings)
         let i = 1
         let isDef = !lines[index + i].match(/(.*) \/(.*)\//)

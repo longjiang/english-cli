@@ -2,11 +2,11 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import '@/vendor/css-spinners/spinner/heartbeat.css'
 import '@/vendor/css-spinners/spinner/inner-circles.css'
-import '@/assets/css/polyglotzerotohero.css'
+import '@/assets/css/englishzerotohero.css'
 import Vue from 'vue'
 import VTooltip from 'v-tooltip'
 import BootstrapVue from 'bootstrap-vue'
-import PolyglotZeroToHero from './PolyglotZeroToHero'
+import EnglishZeroToHero from './EnglishZeroToHero'
 import Test from './Test'
 import Annotate from '@/components/Annotate'
 import WordList from '@/components/WordList'
@@ -24,6 +24,7 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 import { fas } from '@fortawesome/free-solid-svg-icons'
 import { far } from '@fortawesome/free-regular-svg-icons'
+import { i18n } from './plugins/i18n.js'
 import router from './router'
 import store from './store'
 
@@ -34,6 +35,7 @@ library.add(fab)
 Vue.use(BootstrapVue)
 Vue.use(VTooltip)
 Vue.use(VueObserveVisibility)
+
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.component('Annotate', Annotate)
@@ -106,7 +108,8 @@ if (location.hash === '#/test') {
     new Vue({
       router,
       store,
-      render: h => h(PolyglotZeroToHero)
-    }).$mount('#polyglotzerotohero')
+      i18n,
+      render: h => h(EnglishZeroToHero)
+    }).$mount('#englishzerotohero')
   })
 }

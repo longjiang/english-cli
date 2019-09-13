@@ -1,4 +1,4 @@
-# polyglotzerotohero
+# englishzerotohero
 
 ## Project setup
 ```

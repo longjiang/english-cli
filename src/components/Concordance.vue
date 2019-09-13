@@ -9,14 +9,14 @@
               <span
                 v-html="
                   Helper.highlightMultiple(
-                    example.polyglot,
+                    example.english,
                     words,
                     level || 'outside'
                   )
                 "
               />
             </Annotate>
-            <div v-if="example.english">{{ example.english }}</div>
+            <div v-if="example.l1">{{ example.l1 }}</div>
             <hr />
           </li>
         </ul>

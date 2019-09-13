@@ -143,7 +143,7 @@ export default {
     },
     show(entry) {
       this.entry = entry
-      document.title = `${entry.bare} (${entry.english}) | ${this.$lang ? this.$lang.name : ''} Zero to Hero`
+      document.title = `${entry.bare} (${entry.l1}) | ${this.$lang ? this.$lang.name : ''} Zero to Hero`
     },
     async route() {
       if (this.method && this.args) {

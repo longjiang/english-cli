@@ -12,7 +12,7 @@
         class="focus-exclude"
       />
     </div>
-    <div class="english" v-else>{{ nodef }}</div>
+    <div class="l1" v-else>{{ nodef }}</div>
   </div>
 </template>
 

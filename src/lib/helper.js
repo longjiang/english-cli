@@ -1,4 +1,3 @@
-import countries from './countries.js'
 import $ from 'jquery'
 import Helper from '@/lib/helper'
 import Config from '@/lib/config'

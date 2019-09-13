@@ -94,18 +94,18 @@ export default {
               line = line.replace(/ ([,.])/g, '$1')
               if (line.length > options.term.length + 4) {
                 let parallelLine = {
-                  polyglot: line
+                  english: line
                 }
                 if (Line.Align && Line.Align[0].Kwic) {
-                  parallelLine.english = Line.Align[0].Kwic.map(
+                  parallelLine.l1 = Line.Align[0].Kwic.map(
                     kwic => kwic.str
-                  ).reduce((english, kwic) => english + ' ' + kwic)
+                  ).reduce((l1, kwic) => l1 + ' ' + kwic)
                 }
                 result.push(parallelLine)
               }
             }
             result = result.sort(function(a, b) {
-              return a.polyglot.length - b.polyglot.length
+              return a.english.length - b.english.length
             })
             resolve(Helper.unique(result))
           } catch (err) {

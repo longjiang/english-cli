@@ -31,7 +31,7 @@
                 : line.line
             "
         /></Annotate>
-        <div class="transcript-line-english">
+        <div class="transcript-line-l1">
           <span
             v-if="parallellines[lineIndex]"
             v-html="parallellines[lineIndex].line"
@@ -127,7 +127,7 @@ export default {
   font-weight: bold;
 }
 
-.transcript-line-english {
+.transcript-line-l1 {
   color: #aaa;
   font-style: italic;
   font-size: 0.8em;

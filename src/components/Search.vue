@@ -41,7 +41,7 @@
             <b>{{ suggestion.bare }}</b>
           </span>
           <span
-            class="suggestion-english"
+            class="suggestion-l1"
             v-if="suggestion.definitions"
             v-html="Helper.highlight(suggestion.definitions.join(', '), text)"
           ></span>
@@ -191,7 +191,7 @@ a.suggestion {
   background: #ececec;
 }
 
-.suggestion-english {
+.suggestion-l1 {
   font-style: italic;
   color: #777;
 }
@@ -205,7 +205,7 @@ a.suggestion {
   line-height: 1;
 }
 
-.suggestion-english >>> .highlight {
+.suggestion-l1 >>> .highlight {
   font-weight: bold;
 }
 </style>

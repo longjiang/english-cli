@@ -30,8 +30,8 @@
           <SyncedTranscript
             ref="transcript"
             :onSeek="seekYouTube"
-            :lines="this.polyglot"
-            :parallellines="this.english"
+            :lines="this.english"
+            :parallellines="this.l1"
             v-else-if="!loading && hasSubtitles"
           />
           <div v-else-if="!loading && !hasSubtitles" class="jumbotron pt-4 pb-3 bg-light">
@@ -87,8 +87,8 @@ export default {
   },
   data() {
     return {
-      polyglot: [],
       english: [],
+      l1: [],
       title: undefined,
       channel: undefined,
       hasSubtitles: false,
@@ -115,8 +115,8 @@ export default {
       })
     },
     async getTranscript() {
-      this.polyglot = []
       this.english = []
+      this.l1 = []
       this.hasSubtitles = false
       this.loading = true
       let chosenLanguage
@@ -134,14 +134,14 @@ export default {
                   line: $(p).text(),
                   starttime: parseInt($(p).attr('t')) / 1000
                 }
-                this.polyglot.push(line)
+                this.english.push(line)
               }
             }
           )
         )
       }
       await Promise.all(promises)
-      if (this.polyglot.length > 0) {
+      if (this.english.length > 0) {
         await Helper.scrape(
           `https://www.youtube.com/api/timedtext?v=${this.args}&lang=${chosenLanguage}&fmt=srv3&tlang=en`,
           $html => {
@@ -150,7 +150,7 @@ export default {
                 line: $(p).text(),
                 starttime: parseInt($(p).attr('t')) / 1000
               }
-              this.english.push(line)
+              this.l1.push(line)
             }
           }
         )

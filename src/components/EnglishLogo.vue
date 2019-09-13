@@ -2,28 +2,20 @@
   <a
     :href="language.url.replace('https://english.zerotohero.ca/', '/')"
     target="_blank"
-    class="mr-4 mb-4 d-inline-block zerotohero-item link-unstyled"
+    class="mr-4 mb-4 d-inline-block link-unstyled"
   >
-    <img
-      :src="
-        `${Config.server}img/logo-${language.code}-zth-light.png`
-    "
-      :alt="`${language.name} Zero to Hero`"
-      v-if="language.logo"
-      class="logo-image"
-    />
-    <div v-else class="logo-constructed">
-      <div class="logo-circle" :style="`background-image:url(${Config.server}img/logo-square/${language.code}.png)`">
+    <div class="logo-constructed">
+      <div class="logo-circle" :style="`background-image:url(${Config.server}img/logo-square/en.png)`">
         <div
           class="logo-speech-bubble"
           :style="`background-image: url(${Config.server}img/speech-light.png)`"
         >
-          <b>{{ language.code.slice(0,1).toUpperCase()}}{{ language.code.slice(1,2) }}</b>
+          <b>En</b>
         </div>
       </div>
       <div class="logo-text text-white">
-        <div class="logo-text-language">{{ language.name.toUpperCase() }}</div>
-        <div class="logo-text-zth">ZERO TO HERO</div>
+        <div class="logo-text-language">{{ $t('english') }}</div>
+        <div class="logo-text-zth">{{ $t('zerotohero') }}</div>
       </div>
     </div>
   </a>
@@ -85,8 +77,10 @@ export default {
 .logo-text-language {
   font-weight: 100;
   margin-bottom: -0.3em;
+  text-transform: uppercase;
 }
 .logo-text-zth {
   font-weight: bold;
+  text-transform: uppercase;
 }
 </style>

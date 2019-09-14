@@ -218,7 +218,11 @@ const FreeDict = {
     return this.tables
   },
   wordForms(word) {
-    let forms = []
+    let forms = [{
+      table: 'head',
+      field: 'head',
+      form: word.bare
+    }]
     if (word) {
       for (let table of this.formTable()) {
         for (let field of table.fields) {
@@ -234,6 +238,7 @@ const FreeDict = {
         }
       }
     }
+    console.log(forms)
     return forms
   },
   lookupByDef(text, limit = 30) {

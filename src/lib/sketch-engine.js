@@ -60,9 +60,10 @@ export default {
     })
   },
   concordance(options) {
-    let parallel = this.corpname(options.lang).startsWith('opus')
+    let corpus = this.corpora.find(corpus => corpus.corpname === this.corpname(options.lang))
+    let parallel = corpus.aligned && corpus.aligned.length > 0
     let requestJSON = parallel
-      ? `{"attrs":"word","structs":"s,g","refs":"=doc.subcorpus","ctxattrs":"word","viewmode":"align","usesubcorp":"","freqml":[{"attr":"word","ctx":"0","base":"kwic"}],"fromp":1,"pagesize":1000,"concordance_query":[{"queryselector":"iqueryrow","sel_aligned":["opus2_en"],"cql":"","iquery":"${options.term}","queryselector_opus2_en":"iqueryrow","iquery_opus2_en":"","pcq_pos_neg_opus2_en":"pos","filter_nonempty_opus2_en":"on"}]}`
+      ? `{"attrs":"word","structs":"s,g","refs":"=doc.subcorpus","ctxattrs":"word","viewmode":"align","usesubcorp":"","freqml":[{"attr":"word","ctx":"0","base":"kwic"}],"fromp":1,"pagesize":1000,"concordance_query":[{"queryselector":"iqueryrow","sel_aligned":["opus2_${options.lang}"],"cql":"","iquery":"${options.term}","queryselector_opus2_${options.lang}":"iqueryrow","iquery_opus2_${options.lang}":"","pcq_pos_neg_opus2_${options.lang}":"pos","filter_nonempty_opus2_${options.lang}":"on"}]}`
       : `{"lpos":"","wpos":"","default_attr":"word","attrs":"word","refs":"=doc.website","ctxattrs":"word","attr_allpos":"all","usesubcorp":"","viewmode":"kwic","cup_hl":"q","cup_err":"true","cup_corr":"","cup_err_code":"true","structs":"s,g","gdex_enabled":0,"fromp":1,"pagesize":50,"concordance_query":[{"queryselector":"iqueryrow","iquery":"${options.term}"}],"kwicleftctx":"100#","kwicrightctx":"100#"}`
     return new Promise(resolve => {
       $.post(

@@ -1,6 +1,6 @@
 <template>
   <div class="entry-youtube">
-    <div class="widget-title">“{{ text }}” videos on YouTube</div>
+    <div class="widget-title">{{ $t('“{text}” videos on YouTube', {text: text})}}</div>
     <div class="jumbotron-fluid bg-light p-4">
       <YouTubeVideoList :videos="videos" :key="text" />
     </div>

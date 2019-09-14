@@ -27,7 +27,7 @@
         <div class="container">
           <div class="row">
             <div class="col-sm-12">
-              <h6 class="mb-4 text-white">Learn varous languages through English:</h6>
+              <h6 class="mb-4 text-white">{{ $t('Learn varous languages through English:') }}</h6>
               <div class="zerotohero">
                 <LanguageLogo
                   v-for="language in languages.filter(language => language.url && language.published === true).sort((a,b) => b.name > a.name ? -1 : 0)"
@@ -35,7 +35,7 @@
                 />
               </div>
               <hr class="border-light" style="opacity: 0.5" />
-              <h6 class="mt-4 mb-4 text-white">Learn English through various languages:</h6>
+              <h6 class="mt-4 mb-4 text-white">{{ $t('Learn English through various languages:') }}</h6>
               <div class="zerotohero">
                 <EnglishLogo
                   v-for="language in languages.filter(language => language.enURL && language.enPublished === true).sort((a,b) => b.name > a.name ? -1 : 0)"
@@ -115,7 +115,7 @@ export default {
         this.$lang.options = (await import(
           `@/lib/langs/${this.$lang.code}.js`
         )).default
-        let enOptions = (await import(`@/lib/langs/${this.$lang.code}.js`))
+        let enOptions = (await import(`@/lib/langs/en.js`))
           .default
         this.$i18n.setLocaleMessage('en', enOptions.translations)
         this.$i18n.setLocaleMessage(

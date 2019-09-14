@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="widget-title">Collocations with “{{ word.bare }}”</div>
+    <div class="widget-title">{{ $t('Collocations with “{text}”', {text: word.bare}) }}</div>
     <div class="jumbotron-fluid bg-light p-4">
       <div class="row">
         <div
@@ -33,7 +33,7 @@
       </div>
       <hr />
       <div class="mt-2">
-        <p>Collocations provided by</p>
+        <p>{{ $t('Collocations provided by') }}</p>
         <a
           target="_blank"
           :href="

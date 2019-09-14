@@ -1,6 +1,6 @@
 <template>
   <div :key="'concordance-' + concordanceKey">
-    <div class="widget-title">Sentences with “{{ word.bare }}”</div>
+    <div class="widget-title">{{ $t('Sentences with “{text}”', {text: word.bare}) }}</div>
     <div class="jumbotron-fluid bg-light p-4">
       <div v-if="examples && examples.length > 0">
         <ul v-if="examples" class="collapsed list-unstyled" data-collapse-target>
@@ -29,7 +29,7 @@
       </div>
       <hr v-if="examples && examples.length === 0" />
       <div class="mt-4">
-        <p>Sentences provided by</p>
+        <p>{{ $t('Sentences provided by') }}</p>
         <a
           :href="
             `https://app.sketchengine.eu/#concordance?corpname=${encodeURIComponent(
@@ -49,7 +49,7 @@
       </div>
       <hr />
       <div>
-        <p>Search for more sentences at</p>
+        <p>{{ $t('Search for more sentences at') }}</p>
         <a
           :href="
             `https://tatoeba.org/eng/sentences/search?from=rus&to=eng&query=${word.bare}`

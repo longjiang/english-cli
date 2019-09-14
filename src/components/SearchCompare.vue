@@ -1,6 +1,6 @@
 <template>
   <div class="search-compare-wrapper" v-if="!loading">
-    <Search ref="search" random="true" :entry="searchEntry"></Search>
+    <Search ref="search" random="true" :entry="searchEntry" :placeholder="$t('Look up words here...')"></Search>
     <Search
       :class="{ 'ml-2': true, hidden: !dCompare }"
       :entry="compareEntry"

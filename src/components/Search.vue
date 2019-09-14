@@ -15,8 +15,8 @@
         class="btn btn-secondary btn-random ml-2"
         :href="`#/${$lang.code}/dictionary/freedict/random`"
       >
-        <font-awesome-icon icon="random" />
-        <span>Random</span>
+        <font-awesome-icon icon="random" class="mr-1" />
+        <span>{{ $t('Random') }}</span>
       </a>
       <div class="input-group-append">
         <button

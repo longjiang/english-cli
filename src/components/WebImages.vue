@@ -1,6 +1,6 @@
 <template>
   <div class="web-images">
-    <div class="widget-title">Images of “{{ text }}” on the Web</div>
+    <div class="widget-title">{{ $t('Images of “{text}” on the Web', {text: text}) }}</div>
     <div class="jumbotron-fluid bg-light p-4">
       <div
         class="image-wall"
@@ -19,7 +19,7 @@
       </div>
       <hr />
       <div class="mt-2">
-        Image search by
+        {{ $t('Image search by') }}
         <a
           :href="
             `https://www.google.com/search?q=${text}&tbm=isch&sout=1#spf=1567955197854`

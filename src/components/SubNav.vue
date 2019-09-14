@@ -14,10 +14,10 @@
       "
     >
       <router-link class="secondary-menu-item" :to="{ name: 'dictionary' }">
-        <font-awesome-icon icon="font" />Lookup Words
+        <font-awesome-icon icon="font" />{{$t('Lookup Words')}}
       </router-link>
       <router-link class="secondary-menu-item" :to="{ name: 'saved-words' }">
-        <font-awesome-icon icon="star" />Saved
+        <font-awesome-icon icon="star" />{{$t('Saved')}}
         <span class="saved-words-count" v-cloak>{{ savedWordsCount() }}</span>
       </router-link>
     </nav>

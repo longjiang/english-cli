@@ -16,7 +16,7 @@
       :to="{ name: 'dictionary' }"
       title="Lookup and compare words"
     >
-      <font-awesome-icon icon="book" />Dictionary
+      <font-awesome-icon icon="book" />{{ $t('Dictionary') }}
     </router-link>
     <router-link
       :class="{
@@ -30,7 +30,7 @@
       :to="{ name: 'reader' }"
       :title="`Improve your ${lang ? lang.name : ''} through reading`"
     >
-      <font-awesome-icon icon="book-open" />Reading
+      <font-awesome-icon icon="book-open" />{{ $t('Reading') }}
     </router-link>
     <router-link
       :class="{
@@ -40,10 +40,10 @@
       :to="{ name: 'youtube-browse' }"
       :title="`Learn ${lang ? lang.name : ''} with audio-visual material.`"
     >
-      <font-awesome-icon icon="video" />Audio-Visual
+      <font-awesome-icon icon="video" />{{ $t('Audio-Visual') }}
     </router-link>
     <router-link class="tab" :to="{ name: 'settings' }" title="Settings">
-      <font-awesome-icon icon="cog" />Settings
+      <font-awesome-icon icon="cog" />{{ $t('Settings') }}
     </router-link>
   </nav>
 </template>

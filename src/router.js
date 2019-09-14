@@ -11,12 +11,22 @@ export default new Router({
     {
       path: '/',
       name: 'home-redirect',
-      redirect: `/zh/dictionary` // defaulting to /zh if no language is set
+      redirect: `/zh` // defaulting to /zh if no language is set
     },
     {
       path: '/:lang',
       name: 'home',
-      redirect: `/:lang/dictionary`
+      props: true,
+      component: () => import('./views/Home.vue'),
+      meta: {
+        title: 'English Zero to Hero',
+        metaTags: [
+          {
+            name: 'description',
+            content: 'Learn English from Zero and progress to Fluency.'
+          }
+        ]
+      }
     },
     {
       path: '/:lang/dictionary/:method?/:args?',

@@ -1,5 +1,5 @@
 importScripts('../vendor/papaparse/papaparse.min.js')
-importScripts('../js/freedict.js')
+
 
 let ready = false
 
@@ -8,15 +8,16 @@ onmessage = function(e) {
   const method = e.data[1]
   const args = e.data[2]
   if (method === 'load') {
-    let lang = args[0]
-    FreeDict.load(lang).then(() => {
+    let options = args[0]
+    importScripts(`../js/${options.dict}.js`)
+    Dictionary.load(options.lang).then(() => {
       ready = true
       this.postMessage([1, 'load', 'ready'])
     })
   } else if (method === 'freedictMethods') {
-    this.postMessage([id, 'freedictMethods', Object.keys(FreeDict)])
+    this.postMessage([id, 'freedictMethods', Object.keys(Dictionary)])
   } else {
-    let data = FreeDict[method](...args)
+    let data = Dictionary[method](...args)
     this.postMessage([id, method, data])
   }
 }

@@ -68,7 +68,7 @@ import LanguageLogo from '@/components/LanguageLogo'
 import EnglishLogo from '@/components/EnglishLogo'
 import Config from '@/lib/config'
 import Vue from 'vue'
-import FreeDict from '@/lib/freedict'
+import Dict from '@/lib/dict'
 
 export default {
   components: {
@@ -101,7 +101,10 @@ export default {
           lang => lang.code === this.$route.params.lang
         )
         if (!Vue.prototype.$dictionary) {
-          Vue.prototype.$dictionary = FreeDict.load(this.lang)
+          Vue.prototype.$dictionary = Dict.load({
+            dict: this.$lang.enDictionary,
+            lang: this.lang
+          })
         }
         this.$lang.options = (await import(`@/lib/langs/${this.$lang.code}.js`)).default
         this.$i18n.locale = this.$lang.code

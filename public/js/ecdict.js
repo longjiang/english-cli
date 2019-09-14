@@ -8,8 +8,28 @@ const Dictionary = {
       filename: 'eng-ara',
       parser: 'regular'
     },
-    el:  {
-      filename: 'eng-ell',
+    cs:  {
+      filename: 'eng-ces',
+      parser: 'regular'
+    },
+    cy:  {
+      filename: 'eng-cym',
+      parser: 'regular'
+    },
+    da:  {
+      filename: 'eng-dan',
+      parser: 'regular'
+    },
+    de:  {
+      filename: 'eng-deu',
+      parser: 'regular'
+    },
+    en:  {
+      filename: 'eng-fra',
+      parser: 'regular'
+    },
+    eo:  {
+      filename: 'eng-epo',
       parser: 'regular'
     },
     fi:  {
@@ -24,10 +44,6 @@ const Dictionary = {
       filename: 'eng-gle',
       parser: 'regular'
     },
-    hi:  {
-      filename: 'eng-hin',
-      parser: 'regular'
-    },
     hr:  {
       filename: 'eng-hrv',
       parser: 'regular'
@@ -36,12 +52,24 @@ const Dictionary = {
       filename: 'eng-hun',
       parser: 'regular'
     },
+    is:  {
+      filename: 'eng-isl',
+      parser: 'regular'
+    },
     it:  {
       filename: 'eng-ita',
       parser: 'regular'
     },
     ja:  {
       filename: 'eng-jpn',
+      parser: 'regular'
+    },
+    kh:  {
+      filename: 'eng-kha',
+      parser: 'regular'
+    },
+    ku:  {
+      filename: 'eng-kur',
       parser: 'regular'
     },
     la:  {
@@ -64,12 +92,8 @@ const Dictionary = {
       filename: 'eng-por',
       parser: 'regular'
     },
-    ro:  {
-      filename: 'eng-rom',
-      parser: 'regular'
-    },
-    ru:  {
-      filename: 'eng-rus',
+    sk:  {
+      filename: 'eng-slk',
       parser: 'regular'
     },
     es:  {
@@ -172,7 +196,7 @@ const Dictionary = {
     return words
   },
   load(lang) {
-    console.log('Loading FreeDict...')
+    console.log('Loading ECDICT...')
     this.lang = lang
     let server = 'http://hsk-server.local:8888/'
     // let server = 'https://server.chinesezerotohero.com/'

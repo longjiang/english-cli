@@ -65,7 +65,6 @@
               :entry="entry"
               limit="10"
             />
-            <EntryForms class="mt-5" :word="entry" />
 
             <Collocations
               :key="`collocations-${args}`"

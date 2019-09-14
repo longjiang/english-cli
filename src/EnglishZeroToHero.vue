@@ -46,12 +46,18 @@
               <p>
                 <b>Zero to Hero Education, Canada.</b>
               </p>
-              <p>
+              <p v-if="$lang.enDictionary">
                 <b>Credits:</b>
-                {{ $lang.name }}-L1 dictionary data from
-                <a
-                  href="https://freedict.org/"
-                >freedict.org</a>.
+                {{ $lang.name }}-English dictionary data from
+                <span
+                  v-if="$lang.enDictionary === 'freedict'"
+                >
+                  <a href="https://freedict.org/">freedict.org</a>
+                </span>
+                <span v-if="$lang.enDictionary === 'ecdict'">
+                  <a href="https://github.com/skywind3000/ECDICT">ECDICT</a>
+                </span>
+                .
               </p>
             </div>
           </div>
@@ -87,7 +93,6 @@ export default {
   },
   async mounted() {
     this.languages = this.$langs
-    
   },
   watch: {
     async $route() {
@@ -106,10 +111,16 @@ export default {
             lang: this.lang
           })
         }
-        this.$lang.options = (await import(`@/lib/langs/${this.$lang.code}.js`)).default
-        let enOptions = (await import(`@/lib/langs/${this.$lang.code}.js`)).default
+        this.$lang.options = (await import(
+          `@/lib/langs/${this.$lang.code}.js`
+        )).default
+        let enOptions = (await import(`@/lib/langs/${this.$lang.code}.js`))
+          .default
         this.$i18n.setLocaleMessage('en', enOptions.translations)
-        this.$i18n.setLocaleMessage(this.$lang.code, this.$lang.options.translations)
+        this.$i18n.setLocaleMessage(
+          this.$lang.code,
+          this.$lang.options.translations
+        )
         this.$i18n.locale = this.$lang.code
         this.langLoaded = true
       }

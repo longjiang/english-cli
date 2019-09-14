@@ -1,6 +1,6 @@
 <template>
   <a
-    :href="language.url.replace('https://english.zerotohero.ca/', '/')"
+    :href="language.enURL.replace('https://en.zerotohero.ca/', '/')"
     target="_blank"
     class="mr-4 mb-4 d-inline-block link-unstyled"
   >
@@ -14,8 +14,8 @@
         </div>
       </div>
       <div class="logo-text text-white">
-        <div class="logo-text-language">{{ $t('english') }}</div>
-        <div class="logo-text-zth">{{ $t('zerotohero') }}</div>
+        <div class="logo-text-language">{{ $t('english', language.code) }}</div>
+        <div class="logo-text-zth">{{ $t('zerotohero', language.code) }}</div>
       </div>
     </div>
   </a>

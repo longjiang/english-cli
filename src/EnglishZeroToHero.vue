@@ -35,6 +35,14 @@
                 />
               </div>
               <hr class="border-light mt-0 mb-4" style="opacity: 0.5" />
+              <div class="zerotohero">
+                <EnglishLogo
+                  v-for="language in languages.filter(language => language.enURL && language.enPublished === true).sort((a,b) => b.name > a.name ? -1 : 0)"
+                  class="zerotohero-item"
+                  :language="language"
+                />
+              </div>
+              <hr class="border-light mt-0 mb-4" style="opacity: 0.5" />
               <p>
                 <b>Zero to Hero Education, Canada.</b>
               </p>

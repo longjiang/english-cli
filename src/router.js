@@ -11,7 +11,7 @@ export default new Router({
     {
       path: '/',
       name: 'home-redirect',
-      redirect: `/de/dictionary` // defaulting to /de if no language is set
+      redirect: `/zh/dictionary` // defaulting to /zh if no language is set
     },
     {
       path: '/:lang',

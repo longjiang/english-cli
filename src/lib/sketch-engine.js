@@ -7,9 +7,9 @@ export default {
   corpora: SketchEngineCorpora,
   corpname(lang) {
     if (lang) {
-      let corpnames = JSON.parse(localStorage.getItem('zthCorpnames') || '{}')
+      let corpnames = JSON.parse(localStorage.getItem('ezhCorpnames') || '{}')
       let defaultCorpus = this.corpora.find(
-        corpus => corpus.language_id === 'fi' && corpus.is_featured
+        corpus => corpus.language_id === 'en' && corpus.is_featured
       )
       let defaultCorpusName = defaultCorpus
         ? defaultCorpus.corpname

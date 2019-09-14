@@ -15,7 +15,7 @@
         <tr
           v-for="corpus in SketchEngine.corpora.filter(
             corpus =>
-              corpus.language_name === $lang.name && (!(corpus.tags && corpus.tags.includes('learner')))
+              corpus.language_id === 'en' && (!(corpus.tags && corpus.tags.includes('learner')))
           ).sort((a,b) => b.sizes.wordcount - a.sizes.wordcount)"
         >
           <td>
@@ -59,9 +59,9 @@ export default {
   },
   watch: {
     corpname() {
-      let corpnames = JSON.parse(localStorage.getItem('zthCorpnames')) || {}
+      let corpnames = JSON.parse(localStorage.getItem('ezhCorpnames')) || {}
       corpnames[this.$lang.code] = this.corpname
-      localStorage.setItem('zthCorpnames', JSON.stringify(corpnames))
+      localStorage.setItem('ezhCorpnames', JSON.stringify(corpnames))
       location.reload() // Otherwise users won't see the new collocations and example sentences, leaving them confused.
     }
   }

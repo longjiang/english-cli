@@ -1,27 +1,27 @@
 const FreeDict = {
   dictionaries: {
     af: {
-      filename: 'afr-eng',
+      filename: 'eng-afr',
       parser: 'regular'
     },
     ar:  {
-      filename: 'ara-eng',
+      filename: 'eng-ara',
       parser: 'regular'
     },
     cs:  {
-      filename: 'ces-eng',
+      filename: 'eng-ces',
       parser: 'regular'
     },
     cy:  {
-      filename: 'cym-eng',
+      filename: 'eng-cym',
       parser: 'regular'
     },
     da:  {
-      filename: 'dan-eng',
+      filename: 'eng-dan',
       parser: 'regular'
     },
     de:  {
-      filename: 'deu-eng',
+      filename: 'eng-deu',
       parser: 'regular'
     },
     en:  {
@@ -29,91 +29,91 @@ const FreeDict = {
       parser: 'regular'
     },
     eo:  {
-      filename: 'epo-eng',
+      filename: 'eng-epo',
       parser: 'regular'
     },
     fi:  {
-      filename: 'fin-eng',
+      filename: 'eng-fin',
       parser: 'regular'
     },
     fr:  {
-      filename: 'fra-eng',
+      filename: 'eng-fra',
       parser: 'regular'
     },
     ga:  {
-      filename: 'gle-eng',
+      filename: 'eng-gle',
       parser: 'regular'
     },
     hr:  {
-      filename: 'hrv-eng',
+      filename: 'eng-hrv',
       parser: 'regular'
     },
     hu:  {
-      filename: 'hun-eng',
+      filename: 'eng-hun',
       parser: 'regular'
     },
     is:  {
-      filename: 'isl-eng',
+      filename: 'eng-isl',
       parser: 'regular'
     },
     it:  {
-      filename: 'ita-eng',
+      filename: 'eng-ita',
       parser: 'regular'
     },
     ja:  {
-      filename: 'jpn-eng',
+      filename: 'eng-jpn',
       parser: 'regular'
     },
     kh:  {
-      filename: 'kha-eng',
+      filename: 'eng-kha',
       parser: 'regular'
     },
     ku:  {
-      filename: 'kur-eng',
+      filename: 'eng-kur',
       parser: 'regular'
     },
     la:  {
-      filename: 'lat-eng',
+      filename: 'eng-lat',
       parser: 'regular'
     },
     lt:  {
-      filename: 'lit-eng',
+      filename: 'eng-lit',
       parser: 'regular'
     },
     nl:  {
-      filename: 'nld-eng',
+      filename: 'eng-nld',
       parser: 'regular'
     },
     pl:  {
-      filename: 'pol-eng',
+      filename: 'eng-pol',
       parser: 'regular'
     },
     pt:  {
-      filename: 'por-eng',
+      filename: 'eng-por',
       parser: 'regular'
     },
     sk:  {
-      filename: 'slk-eng',
+      filename: 'eng-slk',
       parser: 'regular'
     },
     es:  {
-      filename: 'spa-eng',
+      filename: 'eng-spa',
       parser: 'regular'
     },
     sr:  {
-      filename: 'srp-eng',
+      filename: 'eng-srp',
       parser: 'regular'
     },
     sv:  {
-      filename: 'swe-eng',
+      filename: 'eng-swe',
       parser: 'regular'
     },
     sw:  {
-      filename: 'swh-eng',
+      filename: 'eng-swh',
       parser: 'regular'
     },
     tr:  {
-      filename: 'tur-eng',
+      filename: 'eng-tur',
       parser: 'regular'
     },
   },
@@ -198,7 +198,9 @@ const FreeDict = {
   load(lang) {
     console.log('Loading FreeDict...')
     this.lang = lang
-    this.file = `https://server.chinesezerotohero.com/data/freedict/${this.dictionaries[this.lang].filename}.dict.txt`
+    let server = 'http://hsk-server.local:8888/'
+    // let server = 'https://server.chinesezerotohero.com/'
+    this.file = `${server}data/freedict/${this.dictionaries[this.lang].filename}.dict.txt`
     return new Promise(async resolve => {
       let promises = [this.loadWords()]
       await Promise.all(promises)

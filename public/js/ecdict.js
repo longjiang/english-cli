@@ -42,7 +42,7 @@ const Dictionary = {
     this.lang = lang
     // let server = 'http://hsk-server.local:8888/'
     let server = 'https://server.chinesezerotohero.com/'
-    this.file = `${server}data/ecdict/ecdict.csv.txt`
+    this.file = `${server}data/ecdict/ecdict-simplified.csv.txt`
     return new Promise(async resolve => {
       let promises = [this.loadWords()]
       await Promise.all(promises)

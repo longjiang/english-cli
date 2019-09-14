@@ -59,6 +59,18 @@ export default {
     '将下面的文本<b>复制</b>并<b>粘贴</b>到电子表格程序中，或导入到类似 Anki 或 Quizlet 的背单词程序中。',
     'English': '英语',
     'Pronunciation': '发音',
-    'Definitions': '释义'
+    'Definitions': '释义',
+    'Text Reader': '文本阅读器',
+    'textReaderIntro': '在一些英文文本中书写或粘贴，带注释的文本将显示在文本框下方。您也可以使用<b>Markdown</b>或<b>HTML</b>标签。所有内容都会自动保存到浏览器的 <code>localstorage</code> 里，因此即使刷新浏览器，输入的所有内容仍会保留在此。',
+    'Enter your English text here. Markdown and HTML also supported.': '在此键入英文文本。同时支持 Markdown 和 HTML。',
+    'Not sure what to read?': '不知道该读什么吗？',
+    'Try these resources:': '试试以下资源',
+    'Look for English music lyrics on Google.': '使用搜索引擎查找英文歌词。',
+    libraryIntro: '在 “<a href="#/{lang}/library">阅览室</a>” 页面直接阅读各式英文文献。',
+    'YouTube Transcript': '学习 YouTube 字幕',
+    'Library': '阅览室',
+    'This is where you can enjoy reading a variety of English books with the help of hover dictionary and the ability to save words.': '在这里，你可以借助光标取词词典阅读各种英语书籍。点击任何英语单词，将其存入单词表，之后可前往“词典 > 单词表”查看。',
+    'Custom Reading': '自定义阅读',
+    'Read any online document by pasting the URL.': '粘贴网址，阅读任意网上文章。'
   }
 }

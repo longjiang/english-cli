@@ -1,23 +1,17 @@
 <template>
-  <div class="main pt-5 pb-5">
+  <div class="main pt-3 pb-5">
     <div class="container mt2 mb2">
       <div class="row">
         <div class="col-sm-12">
-          <h4>Reader</h4>
-          <p>
-            Write or paste in some {{ $lang.name }} text, and annotated text will show up
-            below the textbox. You can also use
-            <b>Markdown or HTML tags</b>. Everything is autosaved to your
-            browser’s <code>localStorage</code>, so even if you refresh your
-            browser everything you entered is still here.
-          </p>
+          <h4>{{ $t('Text Reader') }}</h4>
+          <p v-html="$t('textReaderIntro')"/>
           <div class="mt-4 mb-5">
             <textarea
               id="reader-textarea"
               class="form-control"
               cols="30"
               rows="5"
-              :placeholder="`Enter your ${this.$lang.name} text here. Markdown and HTML also supported.`"
+              :placeholder="$t('Enter your English text here. Markdown and HTML also supported.')"
               v-model="text"
             ></textarea>
           </div>
@@ -44,16 +38,13 @@
       <hr />
       <div class="row mt-5">
         <div class="col-sm-12">
-          <h5 class="mb-3">Not sure what to read?</h5>
-          <p>Try these resources:</p>
+          <h5 class="mb-3">{{$t('Not sure what to read?')}}</h5>
+          <p>{{ $t('Try these resources:') }}</p>
           <ul>
             <li>
-              Look for {{ $lang.name }} music lyrics on Google.
+              {{ $t('Look for English music lyrics on Google.') }}
             </li>
-            <li>
-              Read books from various {{ $lang.name }} sources directly in our
-              <a :href="`#/${$lang.code}/library`">Library</a>.
-            </li>
+            <li v-html="$t('libraryIntro', {lang: $lang.code})" />
           </ul>
         </div>
       </div>

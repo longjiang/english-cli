@@ -24,7 +24,7 @@
 
     <nav class="secondary-menu text-center" v-if="$route.name && $route.name.startsWith('youtube')">
       <router-link class="secondary-menu-item" :to="{ name: 'youtube-browse' }">
-        <font-awesome-icon :icon="['fab', 'youtube']" />YouTube Transcript
+        <font-awesome-icon :icon="['fab', 'youtube']" />{{ $t('YouTube Transcript') }}
       </router-link>
     </nav>
 
@@ -37,10 +37,10 @@
       "
     >
       <router-link class="secondary-menu-item" :to="{ name: 'reader' }">
-        <font-awesome-icon icon="file-alt" />Text Reader
+        <font-awesome-icon icon="file-alt" />{{$t('Text Reader')}}
       </router-link>
       <router-link class="secondary-menu-item" :to="{ name: 'library' }">
-        <font-awesome-icon icon="book-open" />Library
+        <font-awesome-icon icon="book-open" />{{$t('Library')}}
       </router-link>
     </nav>
   </div>

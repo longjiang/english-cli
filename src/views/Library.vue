@@ -2,10 +2,9 @@
   <div class="container pt-5 pb-5 main" id="library">
     <div class="row">
       <div class="col-sm-12">
-        <h1 class="mb-5 text-center">Library</h1>
+        <h1 class="mb-5 text-center">{{ $t('Library') }}</h1>
         <p class="text-center lead" style="margin-bottom: 5rem">
-          This is where you can enjoy reading a variety of {{ $lang.name }} books with the
-          help of hover dictionary and the ability to save words.
+          {{ $t('This is where you can enjoy reading a variety of English books with the help of hover dictionary and the ability to save words.') }}
         </p>
         <div v-for="source in sources">
           <template v-if="source.booklists($lang.code).length > 0">
@@ -35,16 +34,15 @@
 
         <hr class="mb-5" />
 
-        <h3 class="text-center mt-5 mb-4">Custom Reading</h3>
+        <h3 class="text-center mt-5 mb-4">{{ $t('Custom Reading') }}</h3>
 
         <p class="text-center lead mb-5">
-          Read
-          <em>any</em> book by pasting the URL
+          {{ $t('Read any online document by pasting the URL.') }}
         </p>
 
         <div class="jumbotron bg-light pt-4 pb-3 mt-3 mb-3">
           <SimpleSearch
-            placeholder="Enter the URL of a book from one of the above sites"
+            placeholder="Enter the URL of a book from one of the sites below."
             :action="
               url => {
                 location.hash = `#/${$lang.code}/book/index/${encodeURIComponent(url)}`

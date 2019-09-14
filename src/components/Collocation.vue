@@ -5,14 +5,12 @@
     <div v-if="collocation">
       <ul class="collapsed gramrel pl-0" data-collapse-target>
         <li v-for="line in lines" class="gramrel-item list-unstyled">
-          <Annotate><span v-html="line"/></Annotate>
+          <Annotate>
+            <span v-html="line" />
+          </Annotate>
         </li>
       </ul>
-      <ShowMoreButton
-        :data-bg-level="level"
-        :length="collocation.Words.length"
-        :min="4"
-      />
+      <ShowMoreButton :data-bg-level="level" :length="collocation.Words.length" :min="4" />
     </div>
     <div v-else>No collocation.</div>
   </div>
@@ -59,9 +57,10 @@ export default {
       this.forms = [this.word.bare]
     }
     if (this.collocation && this.collocation.Words) {
-      this.collocation.Words = this.collocation.Words.sort(
-        (a, b) => a.cm.length - b.cm.length
-      )
+      this.collocation.Words = this.collocation.Words.filter(Word => Word.cm)
+        .sort((a, b) => {
+          return a.cm.length - b.cm.length
+        })
         .filter(Word => !Word.cm.match(/(。|？)/))
         .slice(0, 20)
       let lines = []

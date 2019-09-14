@@ -8,15 +8,9 @@ export default {
   corpname(lang) {
     if (lang) {
       let corpnames = JSON.parse(localStorage.getItem('ezhCorpnames') || '{}')
-      let defaultCorpus = this.corpora.find(
-        corpus => corpus.language_id === 'en' && corpus.is_featured
-      )
-      let defaultCorpusName = defaultCorpus
-        ? defaultCorpus.corpname
-        : this.corpora
-          .filter(corpus => corpus.language_id === lang)
-          .sort((a, b) => b.sizes.wordcount - a.sizes.wordcount)[0].corpname
-      return corpnames[lang] || defaultCorpusName
+      let defaultCorpusName = 'preloaded/ententen15_tt21'
+      let corpname = corpnames[lang] || defaultCorpusName
+      return corpname
     }
   },
   collocationDescription(word) {

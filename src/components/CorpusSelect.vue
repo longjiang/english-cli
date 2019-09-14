@@ -21,8 +21,8 @@
           <td>
             <input
               type="radio"
-              :value="corpus.corpname.replace('preloaded/', '')"
-              :checked="corpus.corpname.replace('preloaded/', '') === SketchEngine.corpname($lang.code)"
+              :value="corpus.corpname"
+              :checked="corpus.corpname === SketchEngine.corpname($lang.code)"
               v-model="corpname"
             />
           </td>

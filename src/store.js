@@ -5,11 +5,10 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    savedWords: JSON.parse(localStorage.getItem('zthSavedWords')) || {}
+    savedWords: JSON.parse(localStorage.getItem('ezhSavedWords')) || {}
   },
   mutations: {
     ADD_SAVED_WORD(state, options) {
-      console.log('adding saved word', options.wordForms, options.lang)
       if (!state.savedWords[options.lang]) {
         state.savedWords[options.lang] = []
       }
@@ -21,7 +20,7 @@ export default new Vuex.Store({
         })
       ) {
         state.savedWords[options.lang].push(options.wordForms)
-        localStorage.setItem('zthSavedWords', JSON.stringify(state.savedWords))
+        localStorage.setItem('ezhSavedWords', JSON.stringify(state.savedWords))
       }
     },
     REMOVE_SAVED_WORD(state, options) {
@@ -30,13 +29,13 @@ export default new Vuex.Store({
           item => !item.includes(options.wordForm)
         )
         state.savedWords[options.lang] = keepers
-        localStorage.setItem('zthSavedWords', JSON.stringify(state.savedWords))
+        localStorage.setItem('ezhSavedWords', JSON.stringify(state.savedWords))
       }
     },
     REMOVE_ALL_SAVED_WORDS(state, options) {
       if (state.savedWords[options.lang]) {
         state.savedWords[options.lang] = []
-        localStorage.setItem('zthSavedWords', JSON.stringify(state.savedWords))
+        localStorage.setItem('ezhSavedWords', JSON.stringify(state.savedWords))
       }
     }
   },

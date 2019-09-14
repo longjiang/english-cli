@@ -53,7 +53,6 @@ export default {
     },
     async saveWordClick() {
       let word = this.word ? await this.allForms() : [this.text.toLowerCase()]
-      console.log(this.$lang.code, 'this.$lang.code')
       this.$store.dispatch('addSavedWord', {
         wordForms: word,
         lang: this.$lang.code

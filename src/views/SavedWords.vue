@@ -2,10 +2,9 @@
   <div class="main container mt-4 mb-4" v-cloak>
     <div class="row">
       <div class="col-sm-12">
-        <h4>My Words</h4>
+        <h4>{{ $t('My Words') }}</h4>
         <p>
-          These words are stored in your browser's local storage, which persists
-          unless you clear your browsing data.
+          {{ $t("These words are stored in your browser's local storage, which persists unless you clear your browsing data.") }}
         </p>
         <hr />
         <div class="my-words-tools mt-2 mb-2 text-right">
@@ -14,7 +13,7 @@
             v-on:click="showExportClick"
             :disabled="this.savedWords.length <= 0"
           >
-            <i class="glyphicon glyphicon-cloud-download"></i> Export CSV
+            <i class="glyphicon glyphicon-cloud-download"></i> {{ $t('Export CSV') }}
           </button>&nbsp;
           <button
             class="remove-all btn btn-danger"
@@ -22,16 +21,12 @@
             :disabled="this.savedWords.length <= 0"
           >
             <i class="glyphicon glyphicon-trash"></i>
-            Clear
+            {{ $t('Clear') }}
           </button>
           <div class="export-wrapper text-left mt-4" v-if="showExport">
-            <p>
-              <b>Copy</b> the text below and
-              <b>paste</b> into your spreadsheet
-              program, or a flashcard app like Anki or Quizlet.
-            </p>
-            <b-form-group label="Inlcude:">
-              <b-form-checkbox-group v-model="selectedCsvOptions" :options="csvOptions"></b-form-checkbox-group>
+            <p v-html="$t('copyPasteCSV')" />
+            <b-form-group :label="$t('Inlcude:')">
+              <b-form-checkbox-group v-model="selectedCsvOptions" :options="csvOptions" @click="updateCSVText()"></b-form-checkbox-group>
             </b-form-group>
             <textarea
               id="export-textarea"
@@ -81,17 +76,17 @@ export default {
       showExport: false,
       savedWords: [],
       savedTexts: [],
-      selectedCsvOptions: [this.$lang.code, 'definitions'],
+      selectedCsvOptions: ['en', 'definitions'],
       csvOptions: [
-        { text: this.$lang.name, value: this.$lang.code },
-        { text: 'Pronunciation', value: 'pronunciation' },
-        { text: 'Definitions', value: 'definitions' }
+        { text: this.$t('English'), value: 'en' },
+        { text: this.$t('Pronunciation'), value: 'pronunciation' },
+        { text: this.$t('Definitions'), value: 'definitions' }
       ]
     }
   },
   watch: {
-    selectedCsvOptions() {
-      $('#export-textarea').val(this.csv())
+    async selectedCsvOptions() {
+      this.csvText = await this.csv()
     },
     stateSavedWords() {
       this.updateWords()
@@ -109,12 +104,14 @@ export default {
     async updateWords() {
       this.savedWords = []
       this.savedTexts = []
-      for (let wordForms of this.$store.state.savedWords[this.$lang.code]) {
-        let word = await (await this.$dictionary).lookup(wordForms[0])
-        if (word) {
-          this.savedWords.push(word)
-        } else {
-          this.savedTexts.push(wordForms[0])
+      if(this.$store.state.savedWords && this.$store.state.savedWords[this.$lang.code]) {
+        for (let wordForms of this.$store.state.savedWords[this.$lang.code]) {
+          let word = await (await this.$dictionary).lookup(wordForms[0])
+          if (word) {
+            this.savedWords.push(word)
+          } else {
+            this.savedTexts.push(wordForms[0].form)
+          }
         }
       }
     },
@@ -125,7 +122,7 @@ export default {
 
       let csv = ''
       for (let word of this.savedWords) {
-        if (this.selectedCsvOptions.includes(this.$lang.code)) {
+        if (this.selectedCsvOptions.includes('en')) {
           let a = word.accented
           csv += `${a}\t`
         }
@@ -143,9 +140,12 @@ export default {
     showImportClick() {
       $('.import-wrapper').toggleClass('hidden')
     },
-    async showExportClick() {
-      this.showExport = !this.showExport
+    async updateCSVText() {
       this.csvText = await this.csv()
+    },
+    showExportClick() {
+      this.showExport = !this.showExport
+      this.updateCSVText()
     },
     removeAllClick() {
       const confirmed = confirm(

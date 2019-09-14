@@ -2,7 +2,7 @@
   <div class="container pt-5 pb-5 main">
     <h1 class="text-center mb-5">Study YouTube Subtitles</h1>
     <SimpleSearch
-      :placeholder="`Enter a search term in ${$lang.name}...`"
+      :placeholder="`Enter a search term in English...`"
       :action="
         url => {
           location.hash = `#/${$lang.code}/youtube/search/${encodeURIComponent(url)}`
@@ -53,7 +53,7 @@ export default {
         videos => {
           this.videos = videos.filter(video => video.cc)
         },
-        { subs: true, lang: this.$lang.code }
+        { subs: true, lang: 'en' }
       )
     }
   }

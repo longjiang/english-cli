@@ -238,7 +238,6 @@ const FreeDict = {
         }
       }
     }
-    console.log(forms)
     return forms
   },
   lookupByDef(text, limit = 30) {

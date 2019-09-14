@@ -17,7 +17,7 @@
             class="mb-4"
             :word="word"
             :level="level"
-            :title="colDesc[name]"
+            :title="$t(colDesc[name], {word: word.bare})"
             :type="name"
             :id="`collocation-${name}`"
             :collocation="getGramrelsByName(sketch.Gramrels, name)"

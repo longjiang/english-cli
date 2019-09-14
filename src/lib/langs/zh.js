@@ -71,6 +71,23 @@ export default {
     'Library': '阅览室',
     'This is where you can enjoy reading a variety of English books with the help of hover dictionary and the ability to save words.': '在这里，你可以借助光标取词词典阅读各种英语书籍。点击任何英语单词，将其存入单词表，之后可前往“词典 > 单词表”查看。',
     'Custom Reading': '自定义阅读',
-    'Read any online document by pasting the URL.': '粘贴网址，阅读任意网上文章。'
+    'Read any online document by pasting the URL.': '粘贴网址，阅读任意网上文章。',
+    'Study YouTube Subtitles': '学习 YouTube 字幕',
+    'Search YouTube': '搜索 YouTube',
+    'Enter a search term in English...': '键入英文关键词……',
+    'Recommended Channels': '推荐频道',
+    'Study any YouTube video that has English subtitles.': '学习任何有英文字幕的 YouTube 视频。',
+    'Go': '前往',
+    'Study': '学习',
+    'Videos': '视频',
+    'Playlists': '播放列表',
+    'Note:': '注意：',
+    'Videos in playlists may not have subtitles.': '播放列表中的某些视频可能没有字幕。',
+    'Text Corpus Settings': '语料库设置',
+    'Corpus': '语料库',
+    'Code': '代码',
+    'Language': '语言',
+    'Words': '单词数',
+    'Note': '备注'
   }
 }

@@ -6,7 +6,7 @@
       :placeholder="placeholder"
     />
     <b-input-group-append>
-      <b-button variant="danger" @click="action(text)">Go</b-button>
+      <b-button variant="danger" @click="action(text)">{{$t('Go')}}</b-button>
     </b-input-group-append>
   </b-input-group>
 </template>

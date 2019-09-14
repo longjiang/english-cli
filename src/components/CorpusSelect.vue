@@ -4,11 +4,11 @@
       <thead>
         <tr>
           <th></th>
-          <th>Corpus</th>
-          <th>Code</th>
-          <th>Language</th>
-          <th>Words</th>
-          <th>Note</th>
+          <th>{{ $t('Corpus') }}</th>
+          <th>{{ $t('Code') }}</th>
+          <th>{{ $t('Language') }}</th>
+          <th>{{ $t('Words') }}</th>
+          <th>{{ $t('Note') }}</th>
         </tr>
       </thead>
       <tbody>

@@ -5,5 +5,10 @@ export default {
   },
   youtube: {
     channels: []
+  },
+  translations: {
+    hello: 'Bonjour',
+    english: 'Anglais',
+    zerotohero: 'Zéro à héro'
   }
 }

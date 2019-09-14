@@ -14,8 +14,8 @@
         </div>
       </div>
       <div class="logo-text text-white">
-        <div class="logo-text-language">{{ $t('english', language.code) }}</div>
-        <div class="logo-text-zth">{{ $t('zerotohero', language.code) }}</div>
+        <div class="logo-text-language">{{ language.translations ? language.translations['english'] : 'English' }}</div>
+        <div class="logo-text-zth">{{ language.translations ? language.translations['zerotohero'] : 'Zero to Hero' }}</div>
       </div>
     </div>
   </a>

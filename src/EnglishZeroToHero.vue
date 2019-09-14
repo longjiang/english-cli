@@ -107,6 +107,9 @@ export default {
           })
         }
         this.$lang.options = (await import(`@/lib/langs/${this.$lang.code}.js`)).default
+        let enOptions = (await import(`@/lib/langs/${this.$lang.code}.js`)).default
+        this.$i18n.setLocaleMessage('en', enOptions.translations)
+        this.$i18n.setLocaleMessage(this.$lang.code, this.$lang.options.translations)
         this.$i18n.locale = this.$lang.code
         this.langLoaded = true
       }
@@ -126,6 +129,6 @@ export default {
   justify-content: flex-start;
 }
 .zerotohero-item {
-  width: 12rem;
+  width: 15rem;
 }
 </style>

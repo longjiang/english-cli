@@ -29,6 +29,103 @@ export default new Router({
       }
     },
     {
+      path: '/:lang/about-english-online-courses',
+      name: 'courses',
+      component: () => import('./views/Courses.vue'),
+      props: true,
+      meta: {
+        title: 'Online Courses | English Zero to Hero',
+        metaTags: [
+          {
+            name: 'description',
+            content:
+              'Achieve fluent communication and outstanding HSK results. Engaging, comprehensive and structured English courses at all CEFR levels. Learning is hard work, but it should never be boring, so we designed our courses to be concise yet fun and engaging.'
+          }
+        ]
+      }
+    },
+    {
+      path: '/:lang/video-count',
+      name: 'video-count',
+      component: () => import('./views/VideoCount.vue'),
+      props: true,
+      meta: {
+        title: 'Video Count | English Zero To Hero',
+        metaTags: [
+          {
+            name: 'description',
+            content:
+              'See the latest stats on how many videos are there in our courses.'
+          }
+        ]
+      }
+    },
+    {
+      path: '/:lang/pricing/:args?',
+      name: 'pricing',
+      component: () => import('./views/Pricing.vue'),
+      props: true,
+      meta: {
+        title: 'Pricing | English Zero To Hero',
+        metaTags: [
+          {
+            name: 'description',
+            content:
+              'No subscription required. Pay once, own the courses forever. Wallet Friendly Pricing.'
+          }
+        ]
+      }
+    },
+    {
+      path: '/:lang/course-release-schedule',
+      name: 'course-release-schedule',
+      component: () => import('./views/ReleaseSchedule.vue'),
+      props: true,
+      meta: {
+        title: 'Course Release Schedule | English Zero To Hero',
+        metaTags: [
+          {
+            name: 'description',
+            content:
+              'We regularly update our courses. Here’s what we are planning on this year.'
+          }
+        ]
+      }
+    },
+    {
+      path: '/:lang/textbooks-workbooks',
+      name: 'textbooks-workbooks',
+      component: () => import('./views/Textbooks.vue'),
+      props: true,
+      meta: {
+        title:
+          'English Course Textbooks and Workbooks | English Zero To Hero',
+        metaTags: [
+          {
+            name: 'description',
+            content:
+              'We regularly update our courses. Here’s what we are planning on this year.'
+          }
+        ]
+      }
+    },
+    {
+      path: '/:lang/faq',
+      name: 'faq',
+      component: () => import('./views/FAQ.vue'),
+      props: true,
+      meta: {
+        title: 'Frequently Asked Questions | English Zero To Hero',
+        metaTags: [
+          {
+            name: 'description',
+            content:
+              'We often hear these questions. Hopefully this page can answer yours.'
+          }
+        ]
+      }
+    },
+    {
       path: '/:lang/dictionary/:method?/:args?',
       name: 'dictionary',
       props: true,
@@ -222,6 +319,52 @@ export default new Router({
           {
             name: 'description',
             content: 'Watch English YouTube videos and study the subtitles.'
+          }
+        ]
+      }
+    },
+    {
+      path: '/:lang/contact-us',
+      name: 'contact',
+      component: () => import('./views/Contact.vue'),
+      props: true,
+      meta: {
+        title: 'Contact Us | English Zero to Hero',
+        metaTags: [
+          {
+            name: 'description',
+            content: 'Get in touch with us.'
+          }
+        ]
+      }
+    },
+    {
+      path: '/:lang/faq',
+      name: 'faq',
+      component: () => import('./views/FAQ.vue'),
+      props: true,
+      meta: {
+        title: 'Frequently Asked Questions | English Zero To Hero',
+        metaTags: [
+          {
+            name: 'description',
+            content:
+              'We often hear these questions. Hopefully this page can answer yours.'
+          }
+        ]
+      }
+    },
+    {
+      path: '/:lang/affiliate-program',
+      name: 'affiliate-program',
+      component: () => import('./views/Affiliate.vue'),
+      props: true,
+      meta: {
+        title: 'Affiliate Program | English Zero To Hero',
+        metaTags: [
+          {
+            name: 'description',
+            content: 'Help us get the word out!'
           }
         ]
       }

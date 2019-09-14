@@ -88,6 +88,16 @@ export default {
     'Code': '代码',
     'Language': '语言',
     'Words': '单词数',
-    'Note': '备注'
+    'Note': '备注',
+    'Courses': '课程',
+    'Contact': '联系方式',
+    'Contact Us': '联系我们',
+    'Language Courses': '语言课程',
+    'Textbooks': '课本',
+    'Video Count': '视频总数',
+    'Pricing': '价格',
+    'Schedule': '发布计划表',
+    'FAQ': '常见问题',
+    'Affiliate Program': '申请销售代理'
   }
 }

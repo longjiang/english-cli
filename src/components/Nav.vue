@@ -4,6 +4,21 @@
       :class="{
         tab: true,
         'router-link-active':
+          $route.name === 'courses' ||
+          $route.name === 'textbooks-workbooks' ||
+          $route.name === 'video-count' ||
+          $route.name === 'pricing' ||
+          $route.name === 'course-release-schedule'
+      }"
+      :to="{ name: 'courses' }"
+      title="Courses"
+    >
+      <font-awesome-icon icon="graduation-cap" />{{$t('Courses')}}
+    </router-link>
+    <router-link
+      :class="{
+        tab: true,
+        'router-link-active':
           $route.name &&
           ($route.name === 'dictionary' ||
             $route.name === 'compare' ||
@@ -41,6 +56,16 @@
       :title="`Learn ${lang ? lang.name : ''} with audio-visual material.`"
     >
       <font-awesome-icon icon="video" />{{ $t('Audio-Visual') }}
+    </router-link>
+    <router-link 
+      :class="{
+        tab: true,
+        'router-link-active': $route.name && 
+          ($route.name === 'contact' ||
+            $route.name === 'faq' ||
+            $route.name === 'affiliate-program')
+      }" :to="{ name: 'contact' }" title="Contact Us">
+      <font-awesome-icon icon="id-card" />{{ $t('Contact') }}
     </router-link>
     <router-link class="tab" :to="{ name: 'settings' }" title="Settings">
       <font-awesome-icon icon="cog" />{{ $t('Settings') }}

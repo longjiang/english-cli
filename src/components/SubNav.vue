@@ -3,6 +3,39 @@
     <nav
       class="secondary-menu text-center"
       v-if="
+        $route.name === 'courses' ||
+          $route.name === 'video-count' ||
+          $route.name === 'pricing' ||
+          $route.name === 'course-release-schedule' ||
+          $route.name === 'textbooks-workbooks'
+      "
+    >
+      <router-link class="secondary-menu-item" :to="{ name: 'courses' }">
+        <font-awesome-icon icon="chalkboard-teacher" />{{ $t('Language Courses')}}
+      </router-link>
+      <router-link
+        class="secondary-menu-item"
+        :to="{ name: 'textbooks-workbooks' }"
+      >
+        <font-awesome-icon icon="book" />{{$t('Textbooks')}}
+      </router-link>
+      <router-link class="secondary-menu-item" :to="{ name: 'video-count' }">
+        <font-awesome-icon icon="list-ol" />{{$t('Video Count')}}
+      </router-link>
+      <router-link class="secondary-menu-item" :to="{ name: 'pricing' }">
+        <font-awesome-icon icon="tag" />{{$t('Pricing')}}
+      </router-link>
+      <router-link
+        class="secondary-menu-item"
+        :to="{ name: 'course-release-schedule' }"
+      >
+        <font-awesome-icon icon="clock" />{{$t('Schedule')}}
+      </router-link>
+    </nav>
+
+    <nav
+      class="secondary-menu text-center"
+      v-if="
         $route.name &&
           ($route.name === 'dictionary' ||
             $route.name === 'compare' ||
@@ -41,6 +74,28 @@
       </router-link>
       <router-link class="secondary-menu-item" :to="{ name: 'library' }">
         <font-awesome-icon icon="book-open" />{{$t('Library')}}
+      </router-link>
+    </nav>
+
+    <nav
+      class="secondary-menu text-center"
+      v-if="
+        $route.name === 'contact' ||
+          $route.name === 'faq' ||
+          $route.name === 'affiliate-program'
+      "
+    >
+      <router-link class="secondary-menu-item" :to="{ name: 'contact' }">
+        <font-awesome-icon icon="id-card" />{{$t('Contact Us')}}
+      </router-link>
+      <router-link class="secondary-menu-item" :to="{ name: 'faq' }">
+        <font-awesome-icon icon="question" />{{$t('FAQ')}}
+      </router-link>
+      <router-link
+        class="secondary-menu-item"
+        :to="{ name: 'affiliate-program' }"
+      >
+        <font-awesome-icon icon="share-alt" />{{$t('Affiliate Program')}}
       </router-link>
     </nav>
   </div>

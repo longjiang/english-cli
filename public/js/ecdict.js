@@ -31,7 +31,7 @@ const Dictionary = {
       accented: row.word,
       head: row.word,
       pronunciation: row.phonetic,
-      definitions: [row.translation],
+      definitions: row.translation.split('\\n'),
       pos: row.pos,
       extra: row
     }

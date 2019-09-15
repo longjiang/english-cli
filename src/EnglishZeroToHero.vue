@@ -8,6 +8,13 @@
               <router-link :to="`/${$lang.code}`">
                 <EnglishLogo :language="$lang" style="transform: scale(1.5)" />
               </router-link>
+              <a
+                v-if="$lang.options.features && $lang.options.features.includes('courses')"
+                class="btn btn-success btn-sign-in text-white"
+                href="https://yingyuyingxiong.teachable.com/sign_in"
+                target="_blank"
+                >登陆 <img src="/img/teachable_light.png" class="logo-small"
+              /></a>
             </div>
           </div>
           <div class="row">
@@ -130,7 +137,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 .logo {
   height: 6rem;
 }
@@ -142,5 +149,16 @@ export default {
 }
 .zerotohero-item {
   width: 15rem;
+}
+
+.btn-sign-in {
+  padding: 0 0.5rem;
+  position: absolute;
+  top: 0;
+  right: 1rem;
+  img {
+    height: 1.2rem;
+    margin-bottom: 0.2rem;
+  }
 }
 </style>

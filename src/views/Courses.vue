@@ -10,7 +10,7 @@
         
         <div class="jumbotron text-center courses bg-white shadow">
           <a
-            href="https://chinesezerotohero.teachable.com/"
+            href="https://yingyuyingxiong.teachable.com/"
             class="btn btn-success view-courses pb-1 bigger"
             target="_blank"
           >

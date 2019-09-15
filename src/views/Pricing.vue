@@ -124,7 +124,7 @@
                 class="text-left text-light"
                 style="background-color: #004d81"
               >
-                <a href="https://chinesezerotohero.teachable.com/p/path-to-fluency">流利之路</a>
+                <a href="https://yingyuyingxiong.teachable.com/p/path-to-fluency">流利之路</a>
               </td>
               <td class="text-center">
                 <b>免费</b>

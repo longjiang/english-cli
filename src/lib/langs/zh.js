@@ -2,7 +2,7 @@ export default {
   youtube: {
     channels: []
   },
-  features: ['home'],
+  features: [ 'home', 'courses' ],
   translations: {
     'Learn varous languages through English:': '通过英语学习其他语言：',
     'Learn English through various languages:': '让全世界学习英语：',

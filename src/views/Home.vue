@@ -91,7 +91,7 @@ export default {
       if (
         !(
           this.$lang.options.features &&
-          this.$lang.options.features.includes['home']
+          this.$lang.options.features.includes('home')
         )
       ) {
         location.hash = `/${this.$lang.code}/dictionary`

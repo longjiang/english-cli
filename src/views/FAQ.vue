@@ -2,129 +2,83 @@
   <div class="faq container mt-5 mb-5">
     <div class="row">
       <div class="col-sm-12">
-        <h1>Frequently Asked Questions</h1>
+        <h1 class="text-center">常见问题</h1>
         <p class="mb-5"></p>
-        <div>
-          <h5>How long do I have access to the course?</h5>
-          <div>
-            <p>How does lifetime access sound? After enrolling, you have unlimited access to this course for as long as you like &ndash; across any and all devices you own.</p>
-          </div>
+      </div>
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+          <h2>我购买了课程，该怎么打开访问？</h2>
+          <p>
+            <br />
+          </p>
+          <p>
+            访问“英语英雄”课件并观看视频有以下两个方法：
+            <br />
+          </p>
+          <p>
+            【方法一】用浏览器访问“英语英雄”网站
+            <a
+              href="http://yingyuyingxiong.teachable.com/courses/enrolled"
+            >http://yingyuyingxiong.teachable.com/courses/enrolled</a> 并用您在“英语英雄”网站注册的邮箱、密码登陆。
+          </p>
+          <p>
+            【方法二】如果您有苹果iPhone/iPad，您也可以用Teachable Online Courses应用。在苹果应用商店里搜索“Teachable Online Courses”即可，图标是一个绿色的方块，中间有个小写字母“t”。（该应用暂时还没有安卓版。 ）
+            <br />
+          </p>
+          <p>
+            <br />
+          </p>
+          <h2>课程会过期吗？</h2>
+          <p>
+            <br />
+          </p>
+          <p>不会。你可以任何时候访问购买的课件，永远不会过期。视频都可以下载。只要点击网页上视频播放器下方的下载按钮即可。</p>
+          <p>
+            <br />
+          </p>
+          <h2>网页打不开怎么办？</h2>
+          <p>
+            <br />
+          </p>
+          <p>
+            网页在中国国内可以正常打开，不需要VPN。只是服务器在国外，所以第一次加载时访问速度较慢，请耐心等待1分钟，第二次加载速度就会很快。视频由Wistia的专用CDN网络提供，因此视频加载速度很快。建议使用Safari，Chrome或Firefox之类的浏览器，不建议使用QQ、百度、UC之类的浏览器。
+            <br />
+          </p>
+          <p>
+            <br />
+          </p>
+          <h2>Teachable是什么？</h2>
+          <p>
+            <br />
+          </p>
+          <p>“英语英雄”网站使用Teachable线上教育平台将课程提供给您。您注册的账户也由Teachable直接管理。</p>
+          <p>
+            <br />
+          </p>
+          <h2>课本怎么买？</h2>
+          <p>
+            <br />
+          </p>
+          <p>
+            想知道课本详情及如何购买，请参考这个页面的信息：
+            <a
+              href="https://yingyuyingxiong.teachable.com/p/textbooks"
+            >如何购买课本？</a>
+          </p>
+          <h2>
+            <br />
+          </h2>
+          <h2>什么时候可以开始上课？</h2>
+          <p>
+            <br />
+          </p>
+          <p>
+            想知道“英语英雄”各个课程的制作计划与进度，请参考
+            <a href="https://yingyuyingxiong.teachable.com/p/home">“英语英雄”首页</a>上的进度表
+          </p>
         </div>
-        <div>
-          <h5>How many videos do you have?</h5>
-          <div>
-            <p>
-              We have a total of 805 videos in the
-              <a
-                href="https://chinesezerotohero.teachable.com/p/ultimate-bundle"
-              >Ultimate Bundle</a>, which include all courses from HSK 1 to 6. The videos are 5 to 20 minutes long. The breakdown by course can be viewed
-              <a
-                href="https://www.chinesezerotohero.com/video-count/"
-              >here</a>.
-            </p>
-          </div>
-        </div>
-        <div>
-          <h5>When does the course start and finish?</h5>
-          <div>
-            <p>The course starts now and never ends! It is a completely self-paced online course &ndash; you decide when you start and when you finish.</p>
-          </div>
-        </div>
-        <div>
-          <h5>Can you give me a discount code?</h5>
-          <div>
-            <p>
-              If you&rsquo;ve passed one or more HSK exams, you can enter our
-              <a
-                href="https://www.chinesezerotohero.com/hall-of-heroes/"
-              >Hall of Heroes</a> and get 15% off on any of our courses.
-            </p>
-          </div>
-        </div>
-        <div>
-          <h5>Do I need textbooks? Where do I get them?</h5>
-          <div>
-            <p>
-              Yes, you will need textbooks. Our course follows the HSK curriculum using the &ldquo;HSK Standard Course by Jiang Liping&rdquo;. You can find links to purchase these books in
-              <a
-                href="https://www.chinesezerotohero.com/textbooks-workbooks"
-              >this page.</a>
-            </p>
-          </div>
-        </div>
-        <div>
-          <h5>Where can I download the audio, answers, or transcript that comes with the textbook or workbook?</h5>
-          <div>
-            <p>Links to these can be found:</p>
-            <p>* in our courses (in the intro section of each course)</p>
-            <p>
-              * on the publishing&rsquo;s
-              <a href="http://blcup.com/">website&nbsp;</a>
-            </p>
-            <p>
-              (See the
-              <a href="https://youtu.be/_0UvuDT0ewQ">video</a> for instructions)
-            </p>
-            <p>
-              * from our Wiki
-              <a
-                href="http://wiki.chinesezerotohero.com/index.php?title=Course_Books"
-              >page</a>&nbsp;
-            </p>
-            <p>* Audio can be found in the CD attached to your book, or by scanning the QR code at the back of your book</p>
-          </div>
-        </div>
-        <div>
-          <h5>Can I access the courses in China?</h5>
-          <div>
-            <p>Web pages can be opened normally in China without VPN. Since the server is not in China, the speed may be slower when loading a page for the first time. Please patiently wait for up to one minute, the second load speed will be very fast. Video is provided by Wistia&rsquo;s dedicated CDN network, so the loading speed of video is very fast. Browsers like Safari, Chrome or Firefox are recommended, while browsers like QQ, Baidu and UC are not recommended.</p>
-          </div>
-        </div>
-        <div>
-          <h5>Can I download the videos?</h5>
-          <div>Yes, you can download our videos and view them offline! Below every video lesson, on the bottom left of the video player, there&rsquo;s a &ldquo;download&rdquo; button.</div>
-        </div>
-        <div>
-          <h5>Can I pay with Wechat or Alipay?</h5>
-          <div>
-            <p>
-              If you prefer WeChat Pay or Alipay, you can add us by ID or by QR codes,&nbsp; let us know&nbsp;
-              <strong>(1) your email address</strong>&nbsp;and&nbsp;
-              <strong>(2) the course(s) you want to enroll,&nbsp;</strong>then we will give you the RMB pricing (same amount as USD) and enrol you manually.
-            </p>
-            <ul>
-              <li>WeChat (longjiang2005bby)</li>
-              <li>Alipay (longjiang1309697)</li>
-            </ul>
-          </div>
-        </div>
-        <div>
-          <h5>What if I am unhappy with the course?</h5>
-          <div>
-            <p>We would never want you to be unhappy! If you are unsatisfied with your purchase, contact us in the first 30 days and we will give you a full refund.</p>
-          </div>
-        </div>
-        <div>
-          <h5>Are you affiliated with the textbook publisher?</h5>
-          <div>
-            <p>No, we are in no way affiliated with the publisher of the HSK Standard Course textbooks. The links we provide on our website are only affiliated with third party sellers.</p>
-          </div>
-        </div>
-        <div>
-          <h5>What platform do you use for the course?</h5>
-          <div>
-            <p>
-              We use Teachable as our platform. More info
-              <a href="https://teachable.com/">here</a>.
-            </p>
-          </div>
-        </div>
-        <div>
-          <h5>Do you charge VAT (Value Added Tax)?</h5>
-          <div>
-            <p>VAT applies to any merchant selling a product or service (including digital products like an online course) to a customer based in Europe. So if you&rsquo;re based in EU, we are required to charge VAT. All of our prices are VAT-inclusive.</p>
-          </div>
-        </div>
+        <div class="col-md-2"></div>
       </div>
     </div>
   </div>

@@ -1,6 +1,7 @@
 <template>
   <nav class="tabs">
     <router-link
+      v-if="this.$lang.options.features && this.$lang.options.features.includes('courses')"
       :class="{
         tab: true,
         'router-link-active':

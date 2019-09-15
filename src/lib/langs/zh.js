@@ -98,6 +98,20 @@ export default {
     'Pricing': '价格',
     'Schedule': '发布计划表',
     'FAQ': '常见问题',
-    'Affiliate Program': '申请销售代理'
+    'Affiliate Program': '申请销售代理',
+    'View all of our courses on': '查看所有课程，前往',
+    'Courses that take your English to the next level.': '让您的英语步入新阶段的语言课程',
+    '<b>Teachable</b> is an online platform that hosts video courses.': '<b>Teachable</b> 是一个第三方代管视频课程的在线平台。',
+    'Course Textbooks': '课程中使用的课本',
+    'Pricing Chart': '价格一览表',
+    'Contact English Zero to Hero': '联系英语英雄',
+    'Contact Ken with general or business inquiries.': '一般业务咨询，请联系 Ken。',
+    'Ken’s Email:': 'Ken 的邮箱',
+    'Ken’s WeChat:': 'Ken 的微信',
+    'Contact Jon with course-related questions.': '有关课程内容的问题，请联系 Jon。',
+    'If you are taking our courses and have a question regarding any content, leave a comment in the comment area of the lecture.': '如果您正在学习我们的课程，对任何课程内容有疑问，请在视频讲座的评论区留言。',
+    'Jon’s Reddit:': 'Jon 的微信',
+    'Join our WeChat discussion group': '加入我们的微信聊天群。',
+    'Download the WeChat app, scan Ken’s QR code below, leave him a message, and he will invite you into the group.': '下载微信应用，扫描下面 Ken 的二维码，用微信给他发消息，他会邀请你加入群。'
   }
 }

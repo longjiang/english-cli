@@ -230,47 +230,54 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   overflow: visible;
 }
 
+.levelPreA1,
+[data-level='PreA1'],
+[data-hover-level='PreA1']:hover,
+[data-hover-level='PreA1'].saved {
+  color: #B51700 !important;
+}
+
 
 .levelA1,
 [data-level='A1'],
 [data-hover-level='A1']:hover,
 [data-hover-level='A1'].saved {
-  color: #f8b51e !important;
+  color: #0076BA !important;
 }
 
 .levelA2,
 [data-level='A2'],
 [data-hover-level='A2']:hover,
 [data-hover-level='A2'].saved {
-  color: #267f94 !important;
+  color: #00882B !important;
 }
 
 .levelB1,
 [data-level='B1'],
 [data-hover-level='B1']:hover,
 [data-hover-level='B1'].saved {
-  color: #fd4f1c !important;
+  color: #6A348A !important;
 }
 
 .levelB2,
 [data-level='B2'],
 [data-hover-level='B2']:hover,
 [data-hover-level='B2'].saved {
-  color: #bb1718 !important;
+  color: #5B0516 !important;
 }
 
 .levelC1,
 [data-level='C1'],
 [data-hover-level='C1']:hover,
 [data-hover-level='C1'].saved {
-  color: #1b3e76 !important;
+  color: #011B3C !important;
 }
 
 .levelC2,
 [data-level='C2'],
 [data-hover-level='C2']:hover,
 [data-hover-level='C2'].saved {
-  color: #6a3669 !important;
+  color: #0f575c !important;
 }
 
 .leveloutside,
@@ -280,39 +287,45 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   color: #c59f94 !important;
 }
 
+.bg-levelPreA1,
+[data-bg-level='PreA1'] {
+  background-color: #B51700 !important;
+  color: white !important;
+}
+
 .bg-levelA1,
 [data-bg-level='A1'] {
-  background-color: #f8b51e !important;
+  background-color: #0076BA !important;
   color: white !important;
 }
 
 .bg-levelA2,
 [data-bg-level='A2'] {
-  background-color: #267f94 !important;
+  background-color: #00882B !important;
   color: white !important;
 }
 
 .bg-levelB1,
 [data-bg-level='B1'] {
-  background-color: #fd4f1c !important;
+  background-color: #6A348A !important;
   color: white !important;
 }
 
 .bg-levelB2,
 [data-bg-level='B2'] {
-  background-color: #bb1718 !important;
+  background-color: #5B0516 !important;
   color: white !important;
 }
 
 .bg-levelC1,
 [data-bg-level='C1'] {
-  background-color: #1b3e76 !important;
+  background-color: #011B3C !important;
   color: white !important;
 }
 
 .bg-levelC2,
 [data-bg-level='C2'] {
-  background-color: #6a3669 !important;
+  background-color: #035F57 !important;
   color: white !important;
 }
 

@@ -2,7 +2,7 @@
   <div class="container mt-5 mb-5">
     <div class="row">
       <div class="col-sm-12">
-        <h1 class="mb-5">Textbooks and Workbooks</h1>
+        <h1 class="mb-5">{{ $t('Course Textbooks') }}</h1>
       </div>
     </div>
     <div class="row">

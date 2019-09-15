@@ -13,15 +13,15 @@
       <router-link class="secondary-menu-item" :to="{ name: 'courses' }">
         <font-awesome-icon icon="chalkboard-teacher" />{{ $t('Language Courses')}}
       </router-link>
-      <router-link
+      <!-- <router-link
         class="secondary-menu-item"
         :to="{ name: 'textbooks-workbooks' }"
       >
         <font-awesome-icon icon="book" />{{$t('Textbooks')}}
-      </router-link>
-      <router-link class="secondary-menu-item" :to="{ name: 'video-count' }">
+      </router-link> -->
+      <!-- <router-link class="secondary-menu-item" :to="{ name: 'video-count' }">
         <font-awesome-icon icon="list-ol" />{{$t('Video Count')}}
-      </router-link>
+      </router-link> -->
       <router-link class="secondary-menu-item" :to="{ name: 'pricing' }">
         <font-awesome-icon icon="tag" />{{$t('Pricing')}}
       </router-link>

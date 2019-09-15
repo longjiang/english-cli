@@ -7,7 +7,7 @@
           class="p-3 shadow"
         >5-DAY END-OF-SUMMER SALE!</span>
       </h2>
-      <div data-bg-hsk="5" class="p-4 d-inline-block">
+      <div data-bg-level="5" class="p-4 d-inline-block">
         <div style="font-size: 1.5rem; font-weight: 100;">ALL COURSES</div>
         <div style="font-weight: 700; font-size: 3rem">25% OFF</div>
         <div>Ends: September 5, 2019</div>

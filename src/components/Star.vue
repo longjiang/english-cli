@@ -6,10 +6,10 @@
       v-on:click="removeWordClick"
       title="Remove word"
     >
-      <font-awesome-icon icon="star" />
+      <i class="fas fa-star"></i>
     </button>
     <button class="star add-word" v-if="!saved()" v-on:click="saveWordClick" title="Add word">
-      <font-awesome-icon :icon="['far', 'star']" />
+      <i class="far fa-star"></i>
     </button>
   </div>
 </template>

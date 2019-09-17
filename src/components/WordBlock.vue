@@ -46,7 +46,7 @@
             <span style="color: #999" v-if="word.pronunciation">/{{ word.pronunciation }}/</span
             ><Speak :text="word.bare" :mp3="word.audio" class="ml-1" />
           </div>
-          <a :href="`#/dictionary/freedict/${words[0].id}`"
+          <a :href="`#/${$lang.code}/dictionary/freedict/${words[0].id}`"
             ><b
               :data-level="word.level || 'outside'"
               style="font-size: 1.5rem"
@@ -201,7 +201,7 @@ export default {
     speak(text) {
       if (!speechSynthesis.speaking) {
         this.utterance = new SpeechSynthesisUtterance(text)
-        this.utterance.lang = this.$lang.code
+        this.utterance.lang = 'en-US'
         speechSynthesis.speak(this.utterance)
       }
     }

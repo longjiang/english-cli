@@ -10,7 +10,7 @@
       />
       <div class="input-group-append">
         <button id="lookup-1" class="btn btn-primary" type="botton">
-          <font-awesome-icon icon="search" />
+          <i class="fas fa-search"></i>
         </button>
       </div>
     </div>

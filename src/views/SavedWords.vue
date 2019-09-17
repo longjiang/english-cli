@@ -60,7 +60,6 @@
 </template>
 
 <script>
-import $ from 'jquery'
 import WordList from '@/components/WordList.vue'
 import { mapState } from 'vuex'
 

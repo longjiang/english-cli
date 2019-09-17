@@ -11,25 +11,25 @@
       "
     >
       <router-link class="secondary-menu-item" :to="{ name: 'courses' }">
-        <font-awesome-icon icon="chalkboard-teacher" />{{ $t('Language Courses')}}
+        <i class="fas fa-chalkboard-teacher"></i>{{ $t('Language Courses')}}
       </router-link>
       <!-- <router-link
         class="secondary-menu-item"
         :to="{ name: 'textbooks-workbooks' }"
       >
-        <font-awesome-icon icon="book" />{{$t('Textbooks')}}
+        <i class="fas fa-book"></i>{{$t('Textbooks')}}
       </router-link> -->
       <!-- <router-link class="secondary-menu-item" :to="{ name: 'video-count' }">
-        <font-awesome-icon icon="list-ol" />{{$t('Video Count')}}
+        <i class="fas fa-list-ol"></i>{{$t('Video Count')}}
       </router-link> -->
       <router-link class="secondary-menu-item" :to="{ name: 'pricing' }">
-        <font-awesome-icon icon="tag" />{{$t('Pricing')}}
+        <i class="fas fa-tag"></i>{{$t('Pricing')}}
       </router-link>
       <router-link
         class="secondary-menu-item"
         :to="{ name: 'course-release-schedule' }"
       >
-        <font-awesome-icon icon="clock" />{{$t('Schedule')}}
+        <i class="fas fa-clock"></i>{{$t('Schedule')}}
       </router-link>
     </nav>
 
@@ -47,17 +47,17 @@
       "
     >
       <router-link class="secondary-menu-item" :to="{ name: 'dictionary' }">
-        <font-awesome-icon icon="font" />{{$t('Lookup Words')}}
+        <i class="fas fa-font"></i>{{$t('Lookup Words')}}
       </router-link>
       <router-link class="secondary-menu-item" :to="{ name: 'saved-words' }">
-        <font-awesome-icon icon="star" />{{$t('Saved')}}
+        <i class="fas fa-star"></i>{{$t('Saved')}}
         <span class="saved-words-count" v-cloak>{{ savedWordsCount() }}</span>
       </router-link>
     </nav>
 
     <nav class="secondary-menu text-center" v-if="$route.name && $route.name.startsWith('youtube')">
       <router-link class="secondary-menu-item" :to="{ name: 'youtube-browse' }">
-        <font-awesome-icon :icon="['fab', 'youtube']" />{{ $t('YouTube Transcript') }}
+        <i class="fab fa-youtube"></i>{{ $t('YouTube Transcript') }}
       </router-link>
     </nav>
 
@@ -70,10 +70,10 @@
       "
     >
       <router-link class="secondary-menu-item" :to="{ name: 'reader' }">
-        <font-awesome-icon icon="file-alt" />{{$t('Text Reader')}}
+        <i class="fas fa-file-alt"></i>{{$t('Text Reader')}}
       </router-link>
       <router-link class="secondary-menu-item" :to="{ name: 'library' }">
-        <font-awesome-icon icon="book-open" />{{$t('Library')}}
+        <i class="fas fa-book-open"></i>{{$t('Library')}}
       </router-link>
     </nav>
 
@@ -86,16 +86,16 @@
       "
     >
       <router-link class="secondary-menu-item" :to="{ name: 'contact' }">
-        <font-awesome-icon icon="id-card" />{{$t('Contact Us')}}
+        <i class="fas fa-id-card"></i>{{$t('Contact Us')}}
       </router-link>
       <router-link class="secondary-menu-item" :to="{ name: 'faq' }">
-        <font-awesome-icon icon="question" />{{$t('FAQ')}}
+        <i class="fas fa-question"></i>{{$t('FAQ')}}
       </router-link>
       <router-link
         class="secondary-menu-item"
         :to="{ name: 'affiliate-program' }"
       >
-        <font-awesome-icon icon="share-alt" />{{$t('Affiliate Program')}}
+        <i class="fas fa-share-alt"></i>{{$t('Affiliate Program')}}
       </router-link>
     </nav>
   </div>

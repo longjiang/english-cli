@@ -17,7 +17,9 @@ export default {
                 word: row.word,
                 phonetic: row.phonetic,
                 translation: row.translation,
-                pos: row.pos
+                pos: row.pos,
+                frq: frq,
+                bnc: bnc
               })
             }
           }

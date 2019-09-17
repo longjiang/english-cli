@@ -14,7 +14,7 @@
       :to="{ name: 'courses' }"
       title="Courses"
     >
-      <font-awesome-icon icon="graduation-cap" />{{$t('Courses')}}
+      <i class="fas fa-graduation-cap"></i>{{$t('Courses')}}
     </router-link>
     <router-link
       :class="{
@@ -32,7 +32,7 @@
       :to="{ name: 'dictionary' }"
       title="Lookup and compare words"
     >
-      <font-awesome-icon icon="book" />{{ $t('Dictionary') }}
+      <i class="fas fa-book"></i>{{ $t('Dictionary') }}
     </router-link>
     <router-link
       :class="{
@@ -46,7 +46,7 @@
       :to="{ name: 'reader' }"
       :title="`Improve your ${lang ? lang.name : ''} through reading`"
     >
-      <font-awesome-icon icon="book-open" />{{ $t('Reading') }}
+      <i class="fas fa-book-open"></i>{{ $t('Reading') }}
     </router-link>
     <router-link
       :class="{
@@ -56,7 +56,7 @@
       :to="{ name: 'youtube-browse' }"
       :title="`Learn ${lang ? lang.name : ''} with audio-visual material.`"
     >
-      <font-awesome-icon icon="video" />{{ $t('Audio-Visual') }}
+      <i class="fas fa-video"></i>{{ $t('Audio-Visual') }}
     </router-link>
     <router-link 
       :class="{
@@ -66,10 +66,10 @@
             $route.name === 'faq' ||
             $route.name === 'affiliate-program')
       }" :to="{ name: 'contact' }" title="Contact Us">
-      <font-awesome-icon icon="id-card" />{{ $t('Contact') }}
+      <i class="fas fa-id-card"></i>{{ $t('Contact') }}
     </router-link>
     <router-link class="tab" :to="{ name: 'settings' }" title="Settings">
-      <font-awesome-icon icon="cog" />{{ $t('Settings') }}
+      <i class="fas fa-cog"></i>{{ $t('Settings') }}
     </router-link>
   </nav>
 </template>

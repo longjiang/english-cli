@@ -40,7 +40,7 @@
               You can tell if a YouTube video has closed captions by clicking on
               the
               <b>CC</b> icon in the player bar, and click on the
-              <font-awesome-icon icon="cog" />next to it. If you can find the
+              <i class="fas fa-cog"></i>next to it. If you can find the
               subtitle with the language
               <b>{{ $lang.name }}</b>
               then the video has {{ $lang.name }}

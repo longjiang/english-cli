@@ -1,8 +1,4 @@
-import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
-import '@/vendor/css-spinners/spinner/heartbeat.css'
-import '@/vendor/css-spinners/spinner/inner-circles.css'
-import '@/assets/css/englishzerotohero.css'
 import Vue from 'vue'
 import VTooltip from 'v-tooltip'
 import BootstrapVue from 'bootstrap-vue'
@@ -19,27 +15,15 @@ import Config from '@/lib/config'
 
 Vue.config.productionTip = false
 
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { fab } from '@fortawesome/free-brands-svg-icons'
-import { fas } from '@fortawesome/free-solid-svg-icons'
-import { far } from '@fortawesome/free-regular-svg-icons'
 import { i18n } from './plugins/i18n.js'
 import router from './router'
 import store from './store'
-
-library.add(far)
-library.add(fas)
-library.add(fab)
 
 Vue.use(BootstrapVue)
 Vue.use(VTooltip)
 Vue.use(VueObserveVisibility)
 
-
-Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.component('Annotate', Annotate)
-Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.component('Loader', Loader)
 Vue.component('Star', Star)
 Vue.component('Speak', Speak)
@@ -103,7 +87,7 @@ if (location.hash === '#/test') {
     render: h => h(Test)
   }).$mount('#test')
 } else {
-  $.getJSON(`${Config.server}data/languages.json`, langs => {
+  $.getJSON('/data/languages.json', langs => {
     Vue.prototype.$langs = langs
     new Vue({
       router,

@@ -6,17 +6,17 @@
   >
     <img
       :src="
-        `${Config.server}img/logo-${language.code}-zth-light.png`
+        `/img/logo-${language.code}-zth-light.png`
     "
       :alt="`${language.name} Zero to Hero`"
       v-if="language.logo"
       class="logo-image"
     />
     <div v-else class="logo-constructed">
-      <div class="logo-circle" :style="`background-image:url(${Config.server}img/logo-square/${language.code}.png)`">
+      <div class="logo-circle" :style="`background-image:url(/img/logo-square/${language.code}.jpg)`">
         <div
           class="logo-speech-bubble"
-          :style="`background-image: url(${Config.server}img/speech-light.png)`"
+          :style="`background-image: url(/img/speech-light.png)`"
         >
           <b>{{ language.code.slice(0,1).toUpperCase()}}{{ language.code.slice(1,2) }}</b>
         </div>

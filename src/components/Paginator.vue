@@ -6,7 +6,7 @@
       title="Previous word"
       v-if="previous"
     >
-      <font-awesome-icon icon="chevron-left" />
+      <i class="fas fa-chevron-left"></i>
     </a>
     {{ title }} <b>{{ currentIndex + 1 }}</b> of {{ items.length }}
     <a
@@ -15,7 +15,7 @@
       title="Next word"
       v-if="next"
     >
-      <font-awesome-icon icon="chevron-right" />
+      <i class="fas fa-chevron-right"></i>
     </a>
   </div>
 </template>

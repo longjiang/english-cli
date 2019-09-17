@@ -1,9 +1,10 @@
 import Wikisource from '@/lib/library-sources/wikisource'
 import Wikipedia from '@/lib/library-sources/wikipedia'
 import WOL from '@/lib/library-sources/wol'
+import Litnet from '@/lib/library-sources/litnet'
 
 export default {
-  universalSources: [Wikipedia, Wikisource, WOL],
+  universalSources: [Wikipedia, Wikisource, WOL, Litnet],
   langSources: [],
   async setLangSources(sources) {
     for (let source of sources) {

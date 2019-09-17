@@ -15,7 +15,6 @@ import Helper from '@/lib/helper'
 import YouTube from '@/lib/youtube'
 import Annotate from '@/components/Annotate'
 import SimplifyECDICT from '@/lib/simplify-ecdict'
-import $ from 'jquery'
 
 export default {
   components: {

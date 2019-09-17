@@ -64,7 +64,6 @@
 </template>
 
 <script>
-import $ from 'jquery'
 import Helper from '@/lib/helper'
 import Marked from 'marked'
 

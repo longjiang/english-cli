@@ -38,13 +38,13 @@
             "
           />
         </div>
-        <b-button-group class="d-flex">
+        <b-button-group class="d-flex mb-5">
           <b-button variant="light" v-if="previous" @click="previousClick">
-            <font-awesome-icon icon="chevron-up" class="mr-2" />Previous
+            <i class="fas fachevron-up mr-2"></i>Previous
           </b-button>
           <b-button variant="light" v-if="next" @click="nextClick">
             Next
-            <font-awesome-icon icon="chevron-down" class="ml-2" />
+            <i class="fas fachevron-down ml-2"></i>
           </b-button>
         </b-button-group>
       </div>
@@ -83,10 +83,10 @@
         </div>
         <b-button-group class="d-flex mb-3">
           <b-button variant="light" v-if="previous" @click="previousClick">
-            <font-awesome-icon icon="chevron-up" class="mr-2" />
+            <i class="fas fachevron-up mr-2"></i>
           </b-button>
           <b-button variant="light" v-if="next" @click="nextClick">
-            <font-awesome-icon icon="chevron-down" class="ml-2" />
+            <i class="fas fachevron-down ml-2"></i>
           </b-button>
         </b-button-group>
         <div class="list-group text-left">

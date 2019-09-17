@@ -3,16 +3,16 @@
     <div class="speech-bar mb-4 sticky bg-white pt-2 pb-2">
       <b-button-group class="d-flex">
         <b-button @click="previous()">
-          <font-awesome-icon icon="chevron-left" />
+          <i class="fas fa-chevron-left"></i>
         </b-button>
         <b-button v-if="!speaking" @click="play()">
-          <font-awesome-icon icon="play" />
+          <i class="fas fa-play"></i>
         </b-button>
         <b-button v-if="speaking" @click="pause()">
-          <font-awesome-icon icon="pause" />
+          <i class="fas fa-pause"></i>
         </b-button>
         <b-button @click="next()">
-          <font-awesome-icon icon="chevron-right" />
+          <i class="fas fa-chevron-right"></i>
         </b-button>
         <b-dropdown right text="Switch Voice" style="flex: 1">
           <b-dropdown-item
@@ -39,7 +39,6 @@
 
 <script>
 import Helper from '@/lib/helper'
-import $ from 'jquery'
 
 export default {
   props: {
@@ -70,7 +69,7 @@ export default {
     getVoices() {
       let voices = speechSynthesis
         .getVoices()
-        .filter(voice => voice.lang.startsWith(this.$lang.code))
+        .filter(voice => voice.lang.startsWith('en'))
       this.voices = voices
     },
     setvoice(index) {
@@ -90,7 +89,7 @@ export default {
     speak(text) {
       if (this.voices.length === 0) this.getVoices()
       this.utterance = new SpeechSynthesisUtterance(text)
-      this.utterance.lang = this.$lang.code
+      this.utterance.lang = 'en-US'
       this.utterance.voice = this.voices[this.voice]
       speechSynthesis.speak(this.utterance)
     },

@@ -1,9 +1,8 @@
 <template>
-  <font-awesome-icon
-    icon="volume-up"
-    class="focus-exclude speak"
+  <i
+    class="fas fa-volume-up focus-exclude speak"
     @click="speak"
-  />
+  ></i>
 </template>
 <script>
 export default {
@@ -18,7 +17,7 @@ export default {
         audio.play()
       } else if (this.text) {
         var utterance = new SpeechSynthesisUtterance(this.text)
-        utterance.lang = this.$lang.code
+        utterance.lang = 'en'
         speechSynthesis.speak(utterance)
       }
     }

@@ -7,7 +7,8 @@
           $route.name === 'video-count' ||
           $route.name === 'pricing' ||
           $route.name === 'course-release-schedule' ||
-          $route.name === 'textbooks-workbooks'
+          $route.name === 'textbooks-workbooks' ||
+          $route.name === 'transfer'
       "
     >
       <router-link class="secondary-menu-item" :to="{ name: 'courses' }">
@@ -24,6 +25,9 @@
       </router-link> -->
       <router-link class="secondary-menu-item" :to="{ name: 'pricing' }">
         <i class="fas fa-tag"></i>{{$t('Pricing')}}
+      </router-link>
+      <router-link class="secondary-menu-item" :to="{ name: 'transfer' }">
+        <i class="fas fa-exchange-alt"></i>{{ $t('Transfer Purchases')}}
       </router-link>
       <router-link
         class="secondary-menu-item"

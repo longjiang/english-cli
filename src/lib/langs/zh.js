@@ -112,6 +112,7 @@ export default {
     'If you are taking our courses and have a question regarding any content, leave a comment in the comment area of the lecture.': '如果您正在学习我们的课程，对任何课程内容有疑问，请在视频讲座的评论区留言。',
     'Jon’s Reddit:': 'Jon 的微信',
     'Join our WeChat discussion group': '加入我们的微信聊天群。',
-    'Download the WeChat app, scan Ken’s QR code below, leave him a message, and he will invite you into the group.': '下载微信应用，扫描下面 Ken 的二维码，用微信给他发消息，他会邀请你加入群。'
+    'Download the WeChat app, scan Ken’s QR code below, leave him a message, and he will invite you into the group.': '下载微信应用，扫描下面 Ken 的二维码，用微信给他发消息，他会邀请你加入群。',
+    'Transfer Purchases': '平台兑换码',
   }
 }

@@ -45,6 +45,22 @@ export default new Router({
       }
     },
     {
+      path: '/:lang/transfer',
+      name: 'transfer',
+      component: () => import('./views/Transfer.vue'),
+      props: true,
+      meta: {
+        title: 'Transfer Purchases | English Zero to Hero',
+        metaTags: [
+          {
+            name: 'description',
+            content:
+              'Transfer your purchases from Teachable to Duanshu.'
+          }
+        ]
+      }
+    },
+    {
       path: '/:lang/video-count',
       name: 'video-count',
       component: () => import('./views/VideoCount.vue'),

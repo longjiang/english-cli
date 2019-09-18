@@ -18,8 +18,9 @@
       @click="click"
       @mouseover="mouseover"
       @mouseout="mouseout"
-      ><slot></slot
-    ></span>
+    >
+      <slot></slot>
+    </span>
     <template slot="popover">
       <div
         class="tooltip-images"
@@ -43,29 +44,22 @@
             of
           </div>
           <div>
-            <span style="color: #999" v-if="word.pronunciation">/{{ word.pronunciation }}/</span
-            ><Speak :text="word.bare" :mp3="word.audio" class="ml-1" />
+            <span style="color: #999" v-if="word.pronunciation">/{{ word.pronunciation }}/</span>
+            <Speak :text="word.bare" :mp3="word.audio" class="ml-1" />
           </div>
-          <a :href="`#/${$lang.code}/dictionary/freedict/${words[0].id}`"
-            ><b
-              :data-level="word.level || 'outside'"
-              style="font-size: 1.5rem"
-              >{{ word.accented }}</b
-            ></a
-          ><span
+          <a :href="`#/${$lang.code}/dictionary/freedict/${words[0].id}`">
+            <b :data-level="word.level || 'outside'" style="font-size: 1.5rem">{{ word.accented }}</b>
+          </a>
+          <span
             v-if="word.level"
             :data-bg-level="word.level"
             class="pl-1 pr-1 ml-1 rounded d-inlin-block"
             style="font-size: 0.8em; position:relative; bottom: 0.2rem;"
-            >{{ word.level }}</span
-          >
+          >{{ word.level }}</span>
         </div>
         <div>
-          <span
-            class="word-type"
-            v-if="word.type !== 'other'"
-            style="color: #999"
-            >{{ word.verbs ? abbreviate(word.verbs.aspect) : '' }}
+          <span class="word-type" v-if="word.type !== 'other'" style="color: #999">
+            {{ word.verbs ? abbreviate(word.verbs.aspect) : '' }}
             {{ abbreviate(word.type) }}
           </span>
           <span class="word-translation" v-if="word.definitions">
@@ -73,20 +67,13 @@
           </span>
         </div>
       </div>
-      <div v-if="loading === true">
-        💭 Thinking...
-      </div>
+      <div v-if="loading === true">💭 Thinking...</div>
       <div v-if="words.length === 0 && loading === false">
-        🤷‍ No clue.<br />
-        <a
-          :href="`https://www.google.com/search?q=${this.text}`"
-          target="_blank"
-          >Google</a
-        >
+        🤷‍ No clue.
+        <br />
+        <a :href="`https://www.google.com/search?q=${this.text}`" target="_blank">Google</a>
         |
-        <a :href="`https://en.wiktionary.org/wiki/${this.text}`" target="_blank"
-          >Wiktionary</a
-        >
+        <a :href="`https://en.wiktionary.org/wiki/${this.text}`" target="_blank">Wiktionary</a>
       </div>
     </template>
   </v-popover>
@@ -162,7 +149,10 @@ export default {
         this.$store.dispatch('removeSavedWord', this.text)
       } else {
         this.speak(this.text)
-        this.$store.dispatch('addSavedWord', await this.allForms())
+        this.$store.dispatch('addSavedWord', {
+          wordForms: await this.allForms(),
+          lang: this.$lang.code
+        })
       }
       this.saved = !this.saved
       return false

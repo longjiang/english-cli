@@ -12,28 +12,27 @@
       "
     >
       <router-link class="secondary-menu-item" :to="{ name: 'courses' }">
-        <i class="fas fa-chalkboard-teacher"></i>{{ $t('Language Courses')}}
+        <i class="fas fa-chalkboard-teacher"></i>
+        {{ $t('Language Courses')}}
       </router-link>
-      <!-- <router-link
-        class="secondary-menu-item"
-        :to="{ name: 'textbooks-workbooks' }"
-      >
-        <i class="fas fa-book"></i>{{$t('Textbooks')}}
-      </router-link> -->
+      <router-link class="secondary-menu-item" :to="{ name: 'textbooks-workbooks' }">
+        <i class="fas fa-book"></i>
+        {{$t('Textbooks')}}
+      </router-link>
       <!-- <router-link class="secondary-menu-item" :to="{ name: 'video-count' }">
         <i class="fas fa-list-ol"></i>{{$t('Video Count')}}
-      </router-link> -->
+      </router-link>-->
       <router-link class="secondary-menu-item" :to="{ name: 'pricing' }">
-        <i class="fas fa-tag"></i>{{$t('Pricing')}}
+        <i class="fas fa-tag"></i>
+        {{$t('Pricing')}}
       </router-link>
       <router-link class="secondary-menu-item" :to="{ name: 'transfer' }">
-        <i class="fas fa-exchange-alt"></i>{{ $t('Transfer Purchases')}}
+        <i class="fas fa-exchange-alt"></i>
+        {{ $t('Transfer Purchases')}}
       </router-link>
-      <router-link
-        class="secondary-menu-item"
-        :to="{ name: 'course-release-schedule' }"
-      >
-        <i class="fas fa-clock"></i>{{$t('Schedule')}}
+      <router-link class="secondary-menu-item" :to="{ name: 'course-release-schedule' }">
+        <i class="fas fa-clock"></i>
+        {{$t('Schedule')}}
       </router-link>
     </nav>
 
@@ -51,17 +50,20 @@
       "
     >
       <router-link class="secondary-menu-item" :to="{ name: 'dictionary' }">
-        <i class="fas fa-font"></i>{{$t('Lookup Words')}}
+        <i class="fas fa-font"></i>
+        {{$t('Lookup Words')}}
       </router-link>
       <router-link class="secondary-menu-item" :to="{ name: 'saved-words' }">
-        <i class="fas fa-star"></i>{{$t('Saved')}}
+        <i class="fas fa-star"></i>
+        {{$t('Saved')}}
         <span class="saved-words-count" v-cloak>{{ savedWordsCount() }}</span>
       </router-link>
     </nav>
 
     <nav class="secondary-menu text-center" v-if="$route.name && $route.name.startsWith('youtube')">
       <router-link class="secondary-menu-item" :to="{ name: 'youtube-browse' }">
-        <i class="fab fa-youtube"></i>{{ $t('YouTube Transcript') }}
+        <i class="fab fa-youtube"></i>
+        {{ $t('YouTube Transcript') }}
       </router-link>
     </nav>
 
@@ -74,10 +76,12 @@
       "
     >
       <router-link class="secondary-menu-item" :to="{ name: 'reader' }">
-        <i class="fas fa-file-alt"></i>{{$t('Text Reader')}}
+        <i class="fas fa-file-alt"></i>
+        {{$t('Text Reader')}}
       </router-link>
       <router-link class="secondary-menu-item" :to="{ name: 'library' }">
-        <i class="fas fa-book-open"></i>{{$t('Library')}}
+        <i class="fas fa-book-open"></i>
+        {{$t('Library')}}
       </router-link>
     </nav>
 
@@ -90,16 +94,16 @@
       "
     >
       <router-link class="secondary-menu-item" :to="{ name: 'contact' }">
-        <i class="fas fa-id-card"></i>{{$t('Contact Us')}}
+        <i class="fas fa-id-card"></i>
+        {{$t('Contact Us')}}
       </router-link>
       <router-link class="secondary-menu-item" :to="{ name: 'faq' }">
-        <i class="fas fa-question"></i>{{$t('FAQ')}}
+        <i class="fas fa-question"></i>
+        {{$t('FAQ')}}
       </router-link>
-      <router-link
-        class="secondary-menu-item"
-        :to="{ name: 'affiliate-program' }"
-      >
-        <i class="fas fa-share-alt"></i>{{$t('Affiliate Program')}}
+      <router-link class="secondary-menu-item" :to="{ name: 'affiliate-program' }">
+        <i class="fas fa-share-alt"></i>
+        {{$t('Affiliate Program')}}
       </router-link>
     </nav>
   </div>

@@ -26,9 +26,7 @@
           <thead>
             <tr class="table-secondary">
               <th class="text-left">课程</th>
-              <th class="text-center">单独</th>
-              <th class="text-center">套餐</th>
-              <th class="text-center">套餐</th>
+              <th class="text-center">价格</th>
             </tr>
           </thead>
           <tbody class="table-hover">
@@ -37,21 +35,10 @@
                 class="text-left text-light"
                 data-bg-level="PreA1"
               >
-                <a href="https://yingyuyingxiong.teachable.com/p/1-pre-a1">英语英雄1级（欧标Pre-A1）</a>
+                英语英雄1级（欧标Pre-A1）
               </td>
               <td class="text-center">
-                <span v-html="price(69, {sale: false})"></span>
-              </td>
-              <td class="text-center align-middle" rowspan="4">
-                <span v-html="price(319, {sale: false})"></span><br /><span style="color:rgb(26,148,6); font-size:12px;"
-                  >省 {{ money(57) }}</span
-                >
-              </td>
-              <td class="text-center align-middle" rowspan="7">
-                <span v-html="price(519, {sale: false})"></span> <br /><span
-                  style="color:rgb(26,148,6); font-size:12px;"
-                  >省 {{ money(155) }}</span
-                >
+                待定
               </td>
             </tr>
 
@@ -60,10 +47,10 @@
                 class="text-left text-light"
                 data-bg-level="A1"
               >
-                <a href="https://yingyuyingxiong.teachable.com/p/2-a1">英语英雄2级（欧标A1）</a>
+                英语英雄2级（欧标A1）
               </td>
               <td class="text-center">
-                <span v-html="price(69, {sale: false})"></span>
+                待定
               </td>
             </tr>
 
@@ -72,10 +59,10 @@
                 class="text-left text-light"
                 data-bg-level="A2"
               >
-                <a href="https://yingyuyingxiong.teachable.com/p/3-a2">英语英雄3级（欧标A2）</a>
+                英语英雄3级（欧标A2）
               </td>
               <td class="text-center">
-                <span v-html="price(89, {sale: false})"></span>
+                待定
               </td>
             </tr>
 
@@ -84,10 +71,10 @@
                 class="text-left text-light"
                 data-bg-level="B1"
               >
-                <a href="https://yingyuyingxiong.teachable.com/p/4-b1">英语英雄4级（欧标B1）</a>
+                英语英雄4级（欧标B1）
               </td>
               <td class="text-center">
-                <span v-html="price(149, {sale: false})"></span>
+                待定
               </td>
             </tr>
 
@@ -96,16 +83,10 @@
                 class="text-left text-light"
                 data-bg-level="B2"
               >
-                <a href="https://yingyuyingxiong.teachable.com/p/5-b2">英语英雄5级（欧标B2）</a>
+                <a href="https://wazuc.duanshu.com/#/course/cb3011a438c14b979eda82c8de1ed6f0">英语英雄5级（欧标B2）</a>
               </td>
               <td class="text-center">
                 <span v-html="price(149, {sale: false})"></span>
-              </td>
-              <td class="text-center align-middle" rowspan="3">
-                <span v-html="price(259, {sale: false})"></span>
-                <br /><span style="color:rgb(26,148,6); font-size:12px;"
-                  >省 {{ money(39) }}</span
-                >
               </td>
             </tr>
             <tr>
@@ -113,7 +94,7 @@
                 class="text-left text-light"
                 data-bg-level="C1"
               >
-                <a href="https://yingyuyingxiong.teachable.com/p/6-c1">英语英雄6级（欧标C1）</a>
+                <a href="https://wazuc.duanshu.com/#/course/af26c83d32c843afa13cb915cbf1ab43">英语英雄6级（欧标C1）</a>
               </td>
               <td class="text-center">
                 <span v-html="price(149, {sale: false})"></span>
@@ -124,7 +105,7 @@
                 class="text-left text-light"
                 style="background-color: #004d81"
               >
-                <a href="https://yingyuyingxiong.teachable.com/p/path-to-fluency">流利之路</a>
+                <a href="https://wazuc.duanshu.com/#/course/278543abd13b4dbcb5dfa6458803fd1c">流利之路</a>
               </td>
               <td class="text-center">
                 <b>免费</b>
@@ -135,7 +116,7 @@
                 class="text-left text-light"
                 style="background-color: #004d81"
               >
-                <a href="https://yingyuyingxiong.teachable.com/p/pronunciation">美式英语发音</a>
+                <a href="https://wazuc.duanshu.com/#/course/02eaa75857d749048504c0f9a3d89a87">美式英语发音</a>
               </td>
               <td class="text-center" colspan="3"><span v-html="price(99, {sale: false})"></span></td>
             </tr>
@@ -144,18 +125,18 @@
                 class="text-left text-light"
                 data-bg-level="C2"
               >
-                <a href="https://yingyuyingxiong.teachable.com/p/c2-words">欧标 C2 词汇</a>
+                <a href="https://wazuc.duanshu.com/#/brief/course/82ada0a7cd424e568c14d399207df96d">欧标 C2 词汇</a>
               </td>
-              <td class="text-center" colspan="3"><span v-html="price(99, {sale: false})"></span></td>
+              <td class="text-center" colspan="3"><span v-html="price(69, {sale: false})"></span></td>
             </tr>
             <tr>
               <td
                 class="text-left text-light"
                 data-bg-level="outside"
               >
-                <a href="#/youtube/channel/UCMoxI3OhLuyItB8__6iuJhg">英雄学院</a>
+                英雄学院
               </td>
-              <td class="text-center" colspan="3"><b>免费</b></td>
+              <td class="text-center" colspan="3">待定</td>
             </tr>
             <tr>
               <td
@@ -168,12 +149,6 @@
             </tr>
           </tbody>
         </table>
-        <p>
-          <b>VAT</b> applies to any merchant selling a product or service
-          (including digital products like an online course) to a customer based
-          in Europe. So if you're based in Europe, we are required to charge VAT
-          on top of these prices.
-        </p>
       </div>
     </div>
   </div>

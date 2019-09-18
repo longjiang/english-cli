@@ -11,9 +11,9 @@
               <a
                 v-if="$lang.options.features && $lang.options.features.includes('courses')"
                 class="btn btn-success btn-sign-in text-white"
-                href="https://yingyuyingxiong.teachable.com/sign_in"
+                href="https://wazuc.duanshu.com/#/"
                 target="_blank"
-                >登陆 <img src="/img/teachable_light.png" class="logo-small"
+                >登陆 <img src="/img/logo-duanshu-light.png" class="logo-small ml-1"
               /></a>
             </div>
           </div>
@@ -152,7 +152,7 @@ export default {
 }
 
 .btn-sign-in {
-  padding: 0 0.5rem;
+  padding: 0.5 1rem;
   position: absolute;
   top: 0;
   right: 1rem;

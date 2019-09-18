@@ -23,7 +23,7 @@
       <img src="img/jon-sitting.png" alt="Jon" class="photo-jon d-none d-lg-block" />
     </div>
     <!-- <Sale /> -->
-    <div class="jumbotron-fluid bg-dark p-5 text-light mb-0 courses" style="position: relative">
+    <div class="jumbotron-fluid bg-dark pt-5 pl-5 pr-5 pb-4 text-light mb-0 courses" style="position: relative">
       <div class="container text-center foreground">
         <h3 class="mb-4">分级课程</h3>
         <p>
@@ -35,9 +35,19 @@
           >欧标</a> A1（最初级）到 C2（最高级）。
         </p>
         <a
-          href="https://yingyuyingxiong.teachable.com/courses"
-          class="btn btn-warning mt-3 mb-2 text-white"
-        >浏览所有课程</a>
+          href="https://wazuc.duanshu.com/#/"
+          class="btn btn-success view-courses pt-3 pb-2 pl-5 pr-5 mt-3 mb-0"
+          style="font-size: 1.5em;"
+          target="_blank"
+        >
+          {{ $t('View all of our courses on') }}
+          <img
+            src="/img/logo-duanshu-light.png"
+            alt="短书"
+            class="ml-2 mb-2"
+            style="height: 2rem; width: auto;"
+          />
+        </a>
       </div>
       <img src="/img/ultimate-bundle.jpg" alt class="img-background" style="opacity: 0.2" />
     </div>

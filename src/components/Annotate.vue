@@ -1,5 +1,34 @@
 <template>
-  <component :is="tag" v-observe-visibility="visibilityChanged">
+  <component :is="tag" v-observe-visibility="visibilityChanged" 
+    :class="{
+      'annotated': true,
+      'show-definition': showDefOn,
+      fullscreen: fullscreenMode
+    }">
+    <div class="annotator-buttons" v-if="!empty()">
+      <Speak
+        v-if="speak"
+        :text="text()"
+        style="position: relative; top: 0.08rem; position: relative;"
+      />
+      <span class="annotator-show-def ml-2 focus-exclude" @click="showDefClick" v-if="showDef">
+        <i class="fas fa-language"></i>
+      </span>
+      <span
+        class="annotator-fullscreen ml-2 focus-exclude"
+        @click="fullscreenClick"
+        v-if="fullscreen"
+      >
+        <i class="fas fa-expand"></i>
+      </span>
+    </div>
+    <span
+      class="annotator-close ml-2 focus-exclude"
+      @click="fullscreenClick"
+      v-if="fullscreen && fullscreenMode"
+    >
+      <i class="fas fa-times" />
+    </span>
     <slot v-if="!this.annotated"></slot>
     <v-runtime-template
       v-else
@@ -19,17 +48,44 @@ export default {
     VRuntimeTemplate
   },
   props: {
+    speak: {
+      default: false
+    },
     tag: {
       default: 'span'
+    },
+    showDef: {
+      default: false
+    },
+    fullscreen: {
+      default: false
     }
   },
   data() {
     return {
       annotatedSlots: [],
-      annotated: false
+      annotated: false,
+      showDefOn: false,
+      fullscreenMode: false,
     }
   },
   methods: {
+    empty() {
+      return (
+        $(this.$el)
+          .text()
+          .trim() === ''
+      )
+    },
+    text() {
+      return $(this.$slots.default[0].elm).text()
+    },
+    showDefClick() {
+      this.showDefOn = !this.showDefOn
+    },
+    fullscreenClick() {
+      this.fullscreenMode = !this.fullscreenMode
+    },
     visibilityChanged(isVisible) {
       if (isVisible && !this.annotated) {
         this.annotated = true
@@ -80,3 +136,53 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+
+.annotated.fullscreen {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: white;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: scroll;
+  font-size: 3rem;
+  padding: 3rem;
+  .speak,
+  .annotator-copy,
+  .annotator-show-def,
+  .annotator-fullscreen {
+    display: none;
+  }
+  .annotator-close {
+    opacity: 0;
+    position: absolute;
+    top: 0.75rem;
+    right: 2.5rem;
+    transition: 0.5s all ease-in-out;
+  }
+  .annotator-close:hover {
+    opacity: 1;
+  }
+}
+
+.annotator-buttons {
+  float: right;
+  padding: 0 0 0.5rem 0.5rem;
+}
+
+.annotator-buttons > *:not(.speak) {
+  cursor: pointer;
+  opacity: 0.3;
+  &:hover {
+    opacity: 1;
+  }
+}
+  
+</style>

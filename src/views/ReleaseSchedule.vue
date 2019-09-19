@@ -14,25 +14,25 @@
         <tbody>
           <tr>
             <td>
-              <a href="https://yingyuyingxiong.teachable.com/p/pronunciation">
+              <a href="https://wazuc.duanshu.com/#/course/02eaa75857d749048504c0f9a3d89a87">
                 <img src="https://www.filepicker.io/api/file/LsVQWf7SQ6dnSrI7Gq91" alt="美式英语发音课程" />
               </a>
               <br />
             </td>
             <td>美式英语发音课程</td>
             <td>
-              <a href="https://yingyuyingxiong.teachable.com/p/pronunciation">查看详情</a>
+              <a href="https://wazuc.duanshu.com/#/course/02eaa75857d749048504c0f9a3d89a87">查看详情</a>
             </td>
           </tr>
           <tr>
             <td>
-              <a href="https://yingyuyingxiong.teachable.com/p/c2-words">
+              <a href="https://wazuc.duanshu.com/#/brief/course/82ada0a7cd424e568c14d399207df96d">
                 <img src="https://www.filepicker.io/api/file/F3WTIyfFSbe2ZWZEgb05" alt="C2词汇" />
               </a>
             </td>
             <td>欧标C2词汇</td>
             <td>
-              <a href="https://yingyuyingxiong.teachable.com/p/c2-words">查看详情</a>
+              <a href="https://wazuc.duanshu.com/#/brief/course/82ada0a7cd424e568c14d399207df96d">查看详情</a>
             </td>
           </tr>
           <tr>
@@ -48,7 +48,7 @@
           </tr>
           <tr>
             <td>
-              <a href="https://yingyuyingxiong.teachable.com/p/6-c1">
+              <a href="https://wazuc.duanshu.com/#/course/af26c83d32c843afa13cb915cbf1ab43">
                 <img
                   src="https://www.filepicker.io/api/file/4u2DBV8TpO1ZIVuIFuRQ"
                   alt="英语英雄6级（欧标C1）"
@@ -60,13 +60,13 @@
               <br />达到雅思8分，适合英语专业学生。
             </td>
             <td>
-              <a href="https://yingyuyingxiong.teachable.com/p/6-c1">查看详情</a>
+              <a href="https://wazuc.duanshu.com/#/course/af26c83d32c843afa13cb915cbf1ab43">查看详情</a>
               <br />
             </td>
           </tr>
           <tr>
             <td>
-              <a href="https://yingyuyingxiong.teachable.com/p/5-b2">
+              <a href="https://wazuc.duanshu.com/#/course/cb3011a438c14b979eda82c8de1ed6f0">
                 <img
                   src="https://www.filepicker.io/api/file/9zFnb5hnSmy0mVQEEr5i"
                   alt="英语英雄5级（欧标B2）"
@@ -79,7 +79,7 @@
               <br />
             </td>
             <td>
-              <a href="https://yingyuyingxiong.teachable.com/p/5-b2">查看详情</a>
+              <a href="https://wazuc.duanshu.com/#/course/cb3011a438c14b979eda82c8de1ed6f0">查看详情</a>
               <br />
             </td>
           </tr>

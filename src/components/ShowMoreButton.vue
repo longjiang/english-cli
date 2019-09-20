@@ -6,7 +6,7 @@
     v-on:click="showMoreClick"
   >
     <span v-if="collapsed">
-      <slot>Show {{ count() }} More</slot>
+      <slot>{{ $t('Show {count} More', {count: count()}) }}</slot>
     </span>
     <span v-else>Collapse</span>
   </button>

@@ -71,7 +71,7 @@ export default {
         term: this.word.bare,
         lang: this.$lang.code
       })
-      this.colDesc = SketchEngine.collocationDescription(this.word.bare)
+      this.colDesc = await SketchEngine.collocationDescription(this.word.bare)
     },
     getGramrelsByName(gramrels, name) {
       return gramrels.find(

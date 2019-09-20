@@ -50,6 +50,7 @@ export default {
       results: undefined,
       courses: {
         pronunciation: '美式英语发音课程',
+        '3-a2': '英语英雄 3 级（欧标 A2）',
         '5-b2': '英语英雄 5 级（欧标 B2）',
         '6-c1': '英语英雄 6 级（欧标 C1）',
         'c2-words': 'C2 词汇'

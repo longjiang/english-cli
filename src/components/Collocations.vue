@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="widget-title">{{ $t('Collocations with “{text}”', {text: word.bare}) }}</div>
+    <div class="widget-title">{{ $t('Collocations with “{text}”', {text: term}) }}</div>
     <div class="jumbotron-fluid bg-light p-4">
       <div class="row">
         <div
@@ -16,8 +16,9 @@
             v-if="sketch && sketch.Gramrels"
             class="mb-4"
             :word="word"
+            :text="text"
             :level="level"
-            :title="$t(colDesc[name], {word: word.bare})"
+            :title="$t(colDesc[name], {word: term})"
             :type="name"
             :id="`collocation-${name}`"
             :collocation="getGramrelsByName(sketch.Gramrels, name)"
@@ -25,7 +26,7 @@
         </div>
       </div>
       <div v-if="sketch !== undefined && (sketch === false || !sketch.Gramrels)">
-        Sorry, we could not find any “{{ word.bare }}” collocations in this corpus
+        Sorry, we could not find any “{{ term }}” collocations in this corpus
         (dataset). You can set a different corpus in
         <a
           :href="`#/${$lang.code}/settings`"
@@ -39,7 +40,7 @@
           :href="
             `https://app.sketchengine.eu/#wordsketch?corpname=${encodeURIComponent(
               SketchEngine.corpname
-            )}&tab=basic&lemma=${word.bare}&showresults=1`
+            )}&tab=basic&lemma=${term}&showresults=1`
           "
         >
           <img src="img/logo-sketch-engine.png" alt="Sketch Engine" class="ml-2 logo-small" />
@@ -58,6 +59,9 @@ export default {
     word: {
       type: Object
     },
+    text: {
+      type: String
+    },
     level: {
       default: 'outside'
     }
@@ -67,11 +71,13 @@ export default {
   },
   methods: {
     async update() {
+      this.colDesc = undefined
+      this.sketch = undefined
       this.sketch = await SketchEngine.wsketch({
-        term: this.word.bare,
+        term: this.term,
         lang: this.$lang.code
       })
-      this.colDesc = await SketchEngine.collocationDescription(this.word.bare)
+      this.colDesc = await SketchEngine.collocationDescription(this.term)
     },
     getGramrelsByName(gramrels, name) {
       return gramrels.find(
@@ -86,11 +92,21 @@ export default {
       SketchEngine
     }
   },
-  beforeMount() {
-    this.update()
+  computed: {
+    term() {
+      return this.word ? this.word.bare : this.text
+    }
+  },
+  mounted() {
+    if (!this.colDesc) {
+      this.update()
+    }
   },
   watch: {
     word() {
+      this.update()
+    },
+    text() {
       this.update()
     }
   }

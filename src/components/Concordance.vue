@@ -1,6 +1,6 @@
 <template>
   <div :key="'concordance-' + concordanceKey">
-    <div class="widget-title">{{ $t('Sentences with “{text}”', {text: word.bare}) }}</div>
+    <div class="widget-title">{{ $t('Sentences with “{text}”', {text: term}) }}</div>
     <div class="jumbotron-fluid bg-light p-4">
       <div v-if="examples && examples.length > 0">
         <ul v-if="examples" class="collapsed list-unstyled" data-collapse-target>
@@ -23,7 +23,7 @@
         <ShowMoreButton :length="examples.length" :min="4" :data-bg-level="level" />
       </div>
       <div v-if="examples && examples.length === 0">
-        Sorry, we could not find any “{{ word.bare }}” examples. You can set a
+        Sorry, we could not find any “{{ term }}” examples. You can set a
         different corpus in
         <a :href="`#/${$lang.code}/settings`">Settings</a>.
       </div>
@@ -35,11 +35,11 @@
             `https://app.sketchengine.eu/#concordance?corpname=${encodeURIComponent(
               SketchEngine.corpname
             )}&tab=basic&keyword=${
-              word.bare
+              term
             }&structs=s%2Cg&refs=%3Ddoc.website&showresults=1&operations=%5B%7B%22name%22%3A%22iquery%22%2C%22arg%22%3A%22${
-              word.bare
+              term
             }%22%2C%22active%22%3Atrue%2C%22query%22%3A%7B%22queryselector%22%3A%22iqueryrow%22%2C%22iquery%22%3A%22${
-              word.bare
+              term
             }%22%7D%2C%22id%22%3A3859%7D%5D`
           "
           target="_blank"
@@ -52,7 +52,7 @@
         <p>{{ $t('Search for more sentences at') }}</p>
         <a
           :href="
-            `https://tatoeba.org/eng/sentences/search?from=rus&to=eng&query=${word.bare}`
+            `https://tatoeba.org/eng/sentences/search?from=rus&to=eng&query=${term}`
           "
           target="_blank"
         >
@@ -73,6 +73,9 @@ export default {
     word: {
       type: Object
     },
+    text: {
+      type: String
+    },
     level: {
       default: 'outside'
     }
@@ -86,6 +89,11 @@ export default {
       SketchEngine
     }
   },
+  computed: {
+    term() {
+      return this.word ? this.word.bare : this.text
+    }
+  },
   watch: {
     word() {
       this.update()
@@ -93,12 +101,13 @@ export default {
   },
   methods: {
     async update() {
-      let forms = (await (await this.$dictionary).wordForms(this.word)).map(
+      this.examples = undefined
+      let forms = this.word ? (await (await this.$dictionary).wordForms(this.word)).map(
         form => form.form.replace(/'/g, '')
-      )
-      this.words = [this.word.bare].concat(forms)
+      ) : []
+      this.words = [this.term].concat(forms)
       this.examples = await SketchEngine.concordance({
-        term: this.word.bare,
+        term: this.term,
         lang: this.$lang.code
       })
       this.concordanceKey += 1

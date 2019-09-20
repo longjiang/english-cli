@@ -53,6 +53,9 @@
         <i class="fas fa-font"></i>
         {{$t('Lookup Words')}}
       </router-link>
+      <router-link class="secondary-menu-item" :to="{ name: 'phrase' }">
+        <i class="fas fa-quote-left" />Lookup Phrases
+      </router-link>
       <router-link class="secondary-menu-item" :to="{ name: 'saved-words' }">
         <i class="fas fa-star"></i>
         {{$t('Saved')}}

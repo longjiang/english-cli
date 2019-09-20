@@ -22,14 +22,10 @@
         {{ $t('Image search by') }}
         <a
           :href="
-            `https://www.google.com/search?q=${text}&tbm=isch&sout=1#spf=1567955197854`
+            `https://www.google.com/search?q=${text.replace(/ /g, '+')}&tbm=isch&sout=1#spf=1567955197854`
           "
         >
-          <img
-            src="img/logo-google-images.png"
-            alt="Google Images"
-            class="logo-small ml-2"
-          />
+          <img src="img/logo-google-images.png" alt="Google Images" class="logo-small ml-2" />
         </a>
       </div>
     </div>
@@ -56,10 +52,10 @@ export default {
   },
   methods: {
     async update() {
+      this.images = []
       if (this.entry) {
         Vue.set(this.entry, 'images', this.images)
       }
-      this.images = []
       let images = (await WordPhotos.getGoogleImages(this.text)).slice(
         0,
         this.limit
@@ -75,8 +71,10 @@ export default {
       this.update()
     }
   },
-  mounted() {
-    this.update()
+  created() {
+    if (this.images.length === 0) {
+      this.update()
+    }
   },
   data() {
     return {

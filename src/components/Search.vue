@@ -2,7 +2,7 @@
   <div class="search-wrapper">
     <div class="input-group" v-cloak>
       <input
-        @keyup.enter="lookupKeyupEnter"
+        @keyup.enter="go"
         @focus="active = true"
         @blur="cancel"
         v-model="text"
@@ -21,7 +21,7 @@
       <div class="input-group-append">
         <button
           class="btn btn-danger lookup-button"
-          v-on:click="lookupButtonClick"
+          v-on:click="go"
           type="button"
           title="Search"
         >
@@ -78,6 +78,9 @@ export default {
   props: {
     term: {
       default: ''
+    },
+    defaultURL: {
+      default: () => {}
     },
     type: {
       default: 'dictionary' // can also be 'generic'
@@ -140,12 +143,8 @@ export default {
     }
   },
   methods: {
-    lookupKeyupEnter() {
-      const url = $('.suggestion:first-child').attr('href')
-      if (url) window.location = url
-    },
-    lookupButtonClick() {
-      const url = $('.suggestion:first-child').attr('href')
+    go() {
+      const url = $('.suggestion:first-child').attr('href') || this.defaultURL(this.text)
       if (url) {
         this.suggestions = []
         window.location = url

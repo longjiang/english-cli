@@ -59,7 +59,6 @@
         <div class="row">
           <div class="col-sm-12">
             <WebImages
-              :key="`images-${args}`"
               class="mt-5"
               :text="entry.bare"
               :entry="entry"
@@ -67,13 +66,11 @@
             />
 
             <Collocations
-              :key="`collocations-${args}`"
               class="mt-5 mb-5"
               :word="entry"
               :level="entry.level"
             />
             <Concordance
-              :key="`concordance-${args}`"
               class="mt-5 mb-5"
               :word="entry"
               :level="entry.level"
